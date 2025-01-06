@@ -1,0 +1,75 @@
+{
+    "customer_id": "LECO004",
+    "timestamp": "2025-01-06T11:24:26.865262",
+    "selected_language": "ENGLISH",
+    "selected_category": "Bill Inquiries",
+    "chat_messages": [
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select a language:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('Sinhala', this)\">සිංහල</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Tamil', this)\">தமிழ்</button>\n            <button class=\"language-button\" onclick=\"sendMessage('English', this)\">English</button>\n        </div>\n    "
+        },
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select a language:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('Sinhala', this)\">සිංහල</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Tamil', this)\">தமிழ்</button>\n            <button class=\"language-button\" onclick=\"sendMessage('English', this)\">English</button>\n        </div>\n    "
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! Welcome to LECO. How can I assist you?"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hi there! How can I help you today?"
+        },
+        {
+            "sender": "user",
+            "message": "bill"
+        },
+        {
+            "sender": "bot",
+            "message": "\n                <div>\n                    <p>Please select an option:</p>\n                    <button class=\"language-button\" onclick=\"sendMessage('Bill Balance Check', this)\">Bill Balance Check</button>\n                    <button class=\"language-button\" onclick=\"sendMessage('Bill Dispute', this)\">Bill Dispute</button>\n                    \n                </div>\n            "
+        },
+        {
+            "sender": "user",
+            "message": "Bill Dispute"
+        },
+        {
+            "sender": "bot",
+            "message": "You've selected Bill Dispute.\n\nPlease provide your 10-digit account number or registered mobile number:"
+        },
+        {
+            "sender": "user",
+            "message": "1234567890"
+        },
+        {
+            "sender": "bot",
+            "message": "To proceed with your bill dispute, please provide your 10-digit account number or registered mobile number:"
+        },
+        {
+            "sender": "user",
+            "message": "1234567890"
+        },
+        {
+            "sender": "bot",
+            "message": "Please briefly describe the reason for your dispute:\n(For example: incorrect charges, unauthorized transaction, etc.)"
+        },
+        {
+            "sender": "user",
+            "message": "incorrect charges"
+        },
+        {
+            "sender": "bot",
+            "message": "=== Bill Dispute Case Created ===\n\nAccount Number: 1234567890\nCase Number: #DISP20250106112411\nStatus: Pending Agent Review\n\nWe have logged your dispute. A customer service agent will contact you within 24 hours.\nPlease keep your case number for reference.\n\nIs there anything else we can help you with?"
+        },
+        {
+            "sender": "bot",
+            "message": [
+                "=== Bill Dispute Case Created ===\n\nAccount Number: 1234567890\nCase Number: #DISP20250106112411\nStatus: Pending Agent Review\n\nWe have logged your dispute. A cust",
+                "omer service agent will contact you within 24 hours.\nPlease keep your case number for reference.\n\nIs there anything else we can help you with?"
+            ]
+        }
+    ]
+}
