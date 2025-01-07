@@ -1,0 +1,90 @@
+{
+    "customer_id": "LECO006",
+    "timestamp": "2025-01-07T22:31:48.345053",
+    "selected_language": "ENGLISH",
+    "selected_category": "Bill Inquiries",
+    "chat_messages": [
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select a language:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('Sinhala', this)\">සිංහල</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Tamil', this)\">தமிழ்</button>\n            <button class=\"language-button\" onclick=\"sendMessage('English', this)\">English</button>\n        </div>\n    "
+        },
+        {
+            "sender": "bot",
+            "message": "Hi! Need help with something? I'm here for you."
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hi there! How can I help you today?"
+        },
+        {
+            "sender": "user",
+            "message": "hello"
+        },
+        {
+            "sender": "bot",
+            "message": "Hi there! How can I help you today?"
+        },
+        {
+            "sender": "user",
+            "message": "I need to check my bill"
+        },
+        {
+            "sender": "bot",
+            "message": "\n                <div>\n                    <p>Please select an option:</p>\n                    <button class=\"language-button\" onclick=\"sendMessage('Bill Balance Check', this)\">Bill Balance Check</button>\n                    <button class=\"language-button\" onclick=\"sendMessage('Bill Dispute', this)\">Bill Dispute</button>\n                    \n                </div>\n            "
+        },
+        {
+            "sender": "user",
+            "message": "Bill Balance Check"
+        },
+        {
+            "sender": "bot",
+            "message": "You've selected Bill Balance Check.\n\nPlease provide your 10-digit account number or registered mobile number:"
+        },
+        {
+            "sender": "user",
+            "message": "1234567890"
+        },
+        {
+            "sender": "bot",
+            "message": "To proceed with your bill balance check, please provide your 10-digit account number or registered mobile number:"
+        },
+        {
+            "sender": "user",
+            "message": "1234567890"
+        },
+        {
+            "sender": "bot",
+            "message": "=== Bill Balance Details ===\n\nAccount Number: 1234567890\nCurrent Balance: Rs. 1234.56\n\nWhat would you like to do next?\n\n                <div>\n                    <p>Please select an option:</p>\n                    <button class=\"language-button\" onclick=\"sendMessage('1', this)\">Make a payment</button>\n                    <button class=\"language-button\" onclick=\"sendMessage('2', this)\">View payment history</button>\n                    <button class=\"language-button\" onclick=\"sendMessage('3', this)\">Exit</button>\n                </div>\n                "
+        },
+        {
+            "sender": "bot",
+            "message": [
+                "=== Bill Balance Details ===\n\nAccount Number: 1234567890\nCurrent Balance: Rs. 1234.56\n\nWhat would you like to do next?\n\n                <div>\n                  ",
+                "  <p>Please select an option:</p>\n                    <button class=\"language-button\" onclick=\"sendMessage('1', this)\">Make a payment</button>\n                 ",
+                "   <button class=\"language-button\" onclick=\"sendMessage('2', this)\">View payment history</button>\n                    <button class=\"language-button\" onclick=\"s",
+                "endMessage('3', this)\">Exit</button>\n                </div>\n                "
+            ]
+        },
+        {
+            "sender": "user",
+            "message": "2"
+        },
+        {
+            "sender": "bot",
+            "message": "=== Payment History ===\n\nAccount Number: 1234567890\n\nRecent Transactions:\nDate: 2024-12-20\nAmount: Rs.100.00\nStatus: Completed\nPayment ID: PAY20241220001\n\nDate: 2024-11-15\nAmount: Rs.150.00\nStatus: Completed\nPayment ID: PAY20241115001\n\nWould you like to make a payment?\n                <div>\n                    <p>Please select an option:</p>\n                    <button class=\"language-button\" onclick=\"sendMessage('1', this)\">Yes</button>\n                    \n                    <button class=\"language-button\" onclick=\"sendMessage('3', this)\">Exit</button>\n                </div>\n                "
+        },
+        {
+            "sender": "bot",
+            "message": [
+                "=== Payment History ===\n\nAccount Number: 1234567890\n\nRecent Transactions:\nDate: 2024-12-20\nAmount: Rs.100.00\nStatus: Completed\nPayment ID: PAY20241220001\n\nDate:",
+                " 2024-11-15\nAmount: Rs.150.00\nStatus: Completed\nPayment ID: PAY20241115001\n\nWould you like to make a payment?\n                <div>\n                    <p>Pleas",
+                "e select an option:</p>\n                    <button class=\"language-button\" onclick=\"sendMessage('1', this)\">Yes</button>\n                    \n                 ",
+                "   <button class=\"language-button\" onclick=\"sendMessage('3', this)\">Exit</button>\n                </div>\n                "
+            ]
+        }
+    ]
+}
