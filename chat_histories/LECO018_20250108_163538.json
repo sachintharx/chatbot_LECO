@@ -1,0 +1,64 @@
+{
+    "customer_id": "LECO018",
+    "timestamp": "2025-01-08T16:35:38.231626",
+    "selected_language": "ENGLISH",
+    "selected_category": "Solar Services",
+    "chat_messages": [
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select a language:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('Sinhala', this)\">සිංහල</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Tamil', this)\">தமிழ்</button>\n            <button class=\"language-button\" onclick=\"sendMessage('English', this)\">English</button>\n        </div>\n    "
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! Welcome to LECO. How can I assist you?"
+        },
+        {
+            "sender": "user",
+            "message": "solar"
+        },
+        {
+            "sender": "bot",
+            "message": "Welcome! Please select an option:\n1. Solar Details\n2. Request Solar\nType 'exit' to leave."
+        },
+        {
+            "sender": "user",
+            "message": "1"
+        },
+        {
+            "sender": "bot",
+            "message": "You've selected Solar Details. Please ask any question about our solar services."
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka"
+        },
+        {
+            "sender": "bot",
+            "message": "You: Sri Lanka is an island country in South Asia. It is located in the Indian Ocean, south of India.                           You are a helpful assistant that answers questions based on the provided context.         If the context doesn't contain the answer, say you don't have enough information.         Always maintain a friendly and professional tone. Also, reply to the greetings.                  Previous conversation:         No"
+        },
+        {
+            "sender": "user",
+            "message": "what is capital of it"
+        },
+        {
+            "sender": "bot",
+            "message": "You: The capital of Sri Lanka is Colombo.                           You are a helpful assistant that answers questions based on the provided context.         If the context doesn't contain the answer, say you don't have enough information.         Always maintain a friendly and professional tone. Also, reply to the greetings.                  Previous conversation:         No                  Current question: what is capital of it"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "You: Hello! How can I help you?                           You are a helpful assistant that answers questions based on the provided context.         If the context doesn't contain the answer, say you don't have enough information.         Always maintain a friendly and professional tone. Also, reply to the greetings.                  Previous conversation:         No previous conversation.                  Current question: hi"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! How can I help you?                           You are a helpful assistant that answers questions based on the provided context.         If the context doesn't contain the answer, say you don't have enough information.         Always maintain a friendly and professional tone. Also, reply to the greetings.                  Previous conversation:         No previous conversation.                  Current question: hi"
+        }
+    ]
+}

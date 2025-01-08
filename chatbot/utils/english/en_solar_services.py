@@ -76,18 +76,46 @@ class SolarServicesTree_EN:
         update_chat_history(session, "bot", response)
         return response
 
+    # def fetch_chatbot_response(self, user_message, session):
+    #     """Fetch a response from the chatbot API."""
+    #     api_url = "http://localhost:8001/chat/"  # Replace with the actual URL of your API
+    #     payload = {
+    #         "question": user_message,
+    #         "session_id": session.get("session_id", None)
+    #     }
+    #     try:
+    #         response = requests.post(api_url, json=payload)
+    #         response_data = response.json()
+    #         if 'session_id' in response_data:
+    #             session["session_id"] = response_data["session_id"]
+    #         return response_data.get("response", "I'm sorry, I couldn't understand that.")
+    #     except Exception as e:
+    #         return f"An error occurred while fetching the chatbot response: {str(e)}"
+    
     def fetch_chatbot_response(self, user_message, session):
-        """Fetch a response from the chatbot API."""
-        api_url = "http://localhost:8001/chat/"  # Replace with the actual URL of your API
+    
+        api_url = "http://localhost:8001/chat/"  # URL of the FastAPI endpoint
         payload = {
             "question": user_message,
-            "session_id": session.get("session_id", None)
+            "session_id": session.get("session_id", "default")  # Default session if not provided
         }
+        
         try:
+            # Send POST request to the FastAPI server
             response = requests.post(api_url, json=payload)
-            response_data = response.json()
-            if 'session_id' in response_data:
-                session["session_id"] = response_data["session_id"]
-            return response_data.get("response", "I'm sorry, I couldn't understand that.")
+            
+            # Check if the response is successful
+            if response.status_code == 200:
+                response_data = response.json()
+                
+                # Update session with the new session_id if returned
+                if 'session_id' in response_data:
+                    session["session_id"] = response_data["session_id"]
+                
+                # Return the chatbot's response
+                return response_data.get("response", "I'm sorry, I couldn't understand that.")
+            else:
+                return f"Error: {response.status_code}, Unable to get response from the chatbot."
+        
         except Exception as e:
             return f"An error occurred while fetching the chatbot response: {str(e)}"

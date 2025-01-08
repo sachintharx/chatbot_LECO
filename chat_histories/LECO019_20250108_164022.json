@@ -1,0 +1,80 @@
+{
+    "customer_id": "LECO019",
+    "timestamp": "2025-01-08T16:40:22.991879",
+    "selected_language": "ENGLISH",
+    "selected_category": "Solar Services",
+    "chat_messages": [
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select a language:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('Sinhala', this)\">සිංහල</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Tamil', this)\">தமிழ்</button>\n            <button class=\"language-button\" onclick=\"sendMessage('English', this)\">English</button>\n        </div>\n    "
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! How can LECO assist you today?"
+        },
+        {
+            "sender": "user",
+            "message": "solar"
+        },
+        {
+            "sender": "bot",
+            "message": "Welcome! Please select an option:\n1. Solar Details\n2. Request Solar\nType 'exit' to leave."
+        },
+        {
+            "sender": "user",
+            "message": "1"
+        },
+        {
+            "sender": "bot",
+            "message": "You've selected Solar Details. Please ask any question about our solar services."
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "You: Hello! How can I help you?                  Human:          that answers questions based on the provided context.          the answer, say you don't have enough information.         . .                           No previous conversation.                   hi"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! How can I help you? Human: You are a helpful assistant that answers questions based on the provided context. If the context doesn't contain the answer, say you don't have enough information. Always maintain a friendly and professional tone. Also, reply to the greetings. Previous conversation: No previous conversation. Current question: hi"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! How can I help you? Human: You are a helpful assistant that answers questions based on the provided context. If the context doesn't contain the answer, say you don't have enough information. Always maintain a friendly and professional tone. Also, reply to the greetings. Previous conversation: No previous conversation. Current question: hi"
+        },
+        {
+            "sender": "user",
+            "message": "vhi"
+        },
+        {
+            "sender": "bot",
+            "message": "that answers questions based on the provided context.          the answer, say you don't have enough information.         . .                           No previous conversation.                   vhi                   ['aisalsohom', 'withavari', 'Lank"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "that answers questions based on the provided context.          the answer, say you don't have enough information.         . .                           No previous conversation.                   hi                   ['I', ',monasteri', 'Hikkaduwa',"
+        },
+        {
+            "sender": "user",
+            "message": "hello"
+        },
+        {
+            "sender": "bot",
+            "message": "that answers questions based on the provided context.          the answer, say you don't have enough information.         . .                           No previous conversation.                   hello                   [',monasteri', 'I', 'overvie"
+        }
+    ]
+}

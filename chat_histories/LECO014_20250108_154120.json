@@ -1,0 +1,172 @@
+{
+    "customer_id": "LECO014",
+    "timestamp": "2025-01-08T15:41:20.230505",
+    "selected_language": "ENGLISH",
+    "selected_category": "Solar Services",
+    "chat_messages": [
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select a language:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('Sinhala', this)\">සිංහල</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Tamil', this)\">தமிழ்</button>\n            <button class=\"language-button\" onclick=\"sendMessage('English', this)\">English</button>\n        </div>\n    "
+        },
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select a language:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('Sinhala', this)\">සිංහල</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Tamil', this)\">தமிழ்</button>\n            <button class=\"language-button\" onclick=\"sendMessage('English', this)\">English</button>\n        </div>\n    "
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! Welcome to LECO. How can I assist you?"
+        },
+        {
+            "sender": "user",
+            "message": "solar"
+        },
+        {
+            "sender": "bot",
+            "message": "Welcome! Please select an option:\n1. Solar Details\n2. Request Solar\nType 'exit' to leave."
+        },
+        {
+            "sender": "user",
+            "message": "1"
+        },
+        {
+            "sender": "bot",
+            "message": "You've selected Solar Details. Please ask any question about our solar services."
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! How can I help you today?"
+        },
+        {
+            "sender": "user",
+            "message": "what are the routers do you have?"
+        },
+        {
+            "sender": "bot",
+            "message": "We have a variety of routers available, including the AR Router, which supports a range of network frequencies and carrier network standards."
+        },
+        {
+            "sender": "user",
+            "message": "list the routers"
+        },
+        {
+            "sender": "bot",
+            "message": "We have a variety of routers available, including the AR Router, which supports a range of network frequencies and carrier network standards."
+        },
+        {
+            "sender": "user",
+            "message": "give name of some"
+        },
+        {
+            "sender": "bot",
+            "message": "Some of the routers we have available include the AR Router, which supports a range of network frequencies and carrier network standards."
+        },
+        {
+            "sender": "user",
+            "message": "what are the AR routers"
+        },
+        {
+            "sender": "bot",
+            "message": "The AR Router is a router that supports a range of network frequencies and carrier network standards."
+        },
+        {
+            "sender": "user",
+            "message": "what are the your AR routers?"
+        },
+        {
+            "sender": "bot",
+            "message": "The AR Router is a router that supports a range of network frequencies and carrier network standards."
+        },
+        {
+            "sender": "user",
+            "message": "thanks"
+        },
+        {
+            "sender": "bot",
+            "message": "You're welcome!"
+        },
+        {
+            "sender": "user",
+            "message": "what are the huawei products"
+        },
+        {
+            "sender": "bot",
+            "message": "I encountered an error processing your question: 422 Client Error: Unprocessable Entity for url: https://api-inference.huggingface.co/models/mistralai/Mistral-7B-v0.1 (Request ID: GmEzWdqpVAn_Z0XWKRXqE)  Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32768. Given: 34484 `inputs` tokens and 100 `max_new_tokens` Make sure 'text-generation' task is supported by the model."
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "An error occurred while fetching the chatbot response: HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001ACDE2A8370>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "You are a helpful assistant that answers questions based on the provided context.         If the context doesn't contain the answer, say you don't have enough information.         Always maintain a friendly and professional tone. Also, reply to the greetings.                  Previous conversation:         No previous conversation.                  Current question: hi"
+        },
+        {
+            "sender": "user",
+            "message": "hello"
+        },
+        {
+            "sender": "bot",
+            "message": "You are a helpful assistant that answers questions based on the provided context.         If the context doesn't contain the answer, say you don't have enough information.         Always maintain a friendly and professional tone. Also, reply to the greetings.                  Previous conversation:         No previous conversation.                  Current question: hello"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka"
+        },
+        {
+            "sender": "bot",
+            "message": "You are a helpful assistant that answers questions based on the provided context.         If the context doesn't contain the answer, say you don't have enough information.         Always maintain a friendly and professional tone. Also, reply to the greetings.                  Previous conversation:         No previous conversation.                  Current question: what is sri lanka"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "You: Hello! How can I help you?                           You are a helpful assistant that answers questions based on the provided context.         If the context doesn't contain the answer, say you don't have enough information.         Always maintain a friendly and professional tone. Also, reply to the greetings.                  Previous conversation:         No previous conversation.                  Current question: hi"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka"
+        },
+        {
+            "sender": "bot",
+            "message": "You: Sri Lanka is an island country in South Asia. It is located in the Indian Ocean, south of India. The country is known for its beautiful beaches, ancient temples, and tea plantations.                           You are a helpful assistant that answers questions based on the provided context.         If the context doesn't contain the answer, say you don't have enough information.         Always maintain a friendly and professional tone. Also"
+        },
+        {
+            "sender": "user",
+            "message": "ghn"
+        },
+        {
+            "sender": "bot",
+            "message": "An error occurred while fetching the chatbot response: HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001ACDF7E9A50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "You: Hello! How can I help you?                           You are a helpful assistant that answers questions based on the provided context.         If the context doesn't contain the answer, say you don't have enough information.         Always maintain a friendly and professional tone. Also, reply to the greetings.                  Previous conversation:         No previous conversation.                  Current question: hi"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka"
+        },
+        {
+            "sender": "bot",
+            "message": "You: Sri Lanka is an island country in South Asia. It is located in the Indian Ocean, south of India. The country is known for its beautiful beaches, ancient temples, and tea plantations.                           You are a helpful assistant that answers questions based on the provided context.         If the context doesn't contain the answer, say you don't have enough information.         Always maintain a friendly and professional tone. Also"
+        }
+    ]
+}
