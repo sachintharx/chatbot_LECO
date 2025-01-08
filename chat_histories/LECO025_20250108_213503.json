@@ -1,0 +1,160 @@
+{
+    "customer_id": "LECO025",
+    "timestamp": "2025-01-08T21:35:03.722216",
+    "selected_language": "ENGLISH",
+    "selected_category": "Solar Services",
+    "chat_messages": [
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select a language:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('Sinhala', this)\">සිංහල</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Tamil', this)\">தமிழ்</button>\n            <button class=\"language-button\" onclick=\"sendMessage('English', this)\">English</button>\n        </div>\n    "
+        },
+        {
+            "sender": "bot",
+            "message": "Hi! Need help with something? I'm here for you."
+        },
+        {
+            "sender": "user",
+            "message": "solar"
+        },
+        {
+            "sender": "bot",
+            "message": "Welcome! Please select an option:\n1. Solar Details\n2. Request Solar\nType 'exit' to leave."
+        },
+        {
+            "sender": "user",
+            "message": "1"
+        },
+        {
+            "sender": "bot",
+            "message": "You've selected Solar Details. Please ask any question about our solar services."
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Bot: I'm looking for a place to stay in Hikkaduwa. Bot: I'm looking for a place to stay in Hikkaduwa. Yes, I'm looking for a place to stay"
+        },
+        {
+            "sender": "user",
+            "message": "sri lanka culture"
+        },
+        {
+            "sender": "bot",
+            "message": "Sri Lanka is a country in South Asia. Bot: Sri Lanka is a country in South Asia. Yes, Sri Lanka is a country in South Asia. what is the capital of sri lanka ['Sri Lanka', 'Lanka', 'capital']"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Bot: I'm looking for a place to stay in Hikkaduwa. Bot: I'm looking for a place to stay in Hikkaduwa. Yes, I'm looking for a place to stay"
+        },
+        {
+            "sender": "user",
+            "message": "kandy"
+        },
+        {
+            "sender": "bot",
+            "message": "Kandy is a city in Sri Lanka. Bot: Kandy is a city in Sri Lanka. Yes, Kandy is a city in Sri Lanka. what is the capital of sri lanka ['Sri Lanka', 'Lanka', 'capital']"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Bot: I'm looking for a place to stay in Hikkaduwa. Bot: I'm looking for a place to stay in Hikkaduwa. Yes, I'm looking for a place to stay"
+        },
+        {
+            "sender": "user",
+            "message": "who are you"
+        },
+        {
+            "sender": "bot",
+            "message": "I'm looking for a place to stay in Hikkaduwa. Bot: I'm looking for a place to stay in Hikkaduwa. Yes, I'm looking for a place to stay who are you ['I', 'irissa', 'allytheBri', 'lsc"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Bot: I'm looking for a monastery in Hikkaduwa. Bot: I'm looking for a monastery in Hikkaduwa. Yes, I'm looking for a monastery in Hikk"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "I'm looking for a monastery in Hikkaduwa. Bot: I'm looking for a monastery in Hikkaduwa. Yes, I'm looking for a monastery in Hikk"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "I'm looking for a monastery in Hikkaduwa. Bot: I'm looking for a monastery in Hikkaduwa. Yes, I'm looking for a monastery in Hikk"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "I'm looking for a monastery in Hikkaduwa. Bot: I'm looking for a monastery in Hikkaduwa. Yes, I'm looking for a monastery in Hikk"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "I'm looking for a place to stay in Hikkaduwa. Bot: I'm looking for a place to stay in Hikkaduwa. Yes, I'm looking for a place to stay"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka"
+        },
+        {
+            "sender": "bot",
+            "message": "Sri Lanka is an island country in South Asia. It is located in the Indian Ocean, south of India. The country is known for its beautiful beaches, lush rainforests, and ancient Buddhist temples. Sri Lanka is also home to a diverse range of wildlife, including elephants, leopards, and whales. The country has a rich cultural heritage, with influences from both India and Europe. Sri Lanka is a popular tourist destination, with"
+        },
+        {
+            "sender": "user",
+            "message": "what is capital of it?"
+        },
+        {
+            "sender": "bot",
+            "message": "The capital of Sri Lanka is Colombo. It is the largest city in the country and is located on the west coast of the island. Colombo is a bustling metropolis with a mix of modern skyscrapers and colonial-era buildings. The city is home to a variety of cultural attractions, including museums, temples, and parks. Colombo is also a major hub for business and commerce, with a thriving financial district and a"
+        },
+        {
+            "sender": "user",
+            "message": "thanks"
+        },
+        {
+            "sender": "bot",
+            "message": "The capital of Sri Lanka is Colombo. It is the largest city in the country and is located on the west coast of the island. Colombo is a bustling metropolis with a mix of modern skyscrap"
+        },
+        {
+            "sender": "user",
+            "message": "thanks for your help"
+        },
+        {
+            "sender": "bot",
+            "message": "The capital of Sri Lanka is Colombo. It is the largest city in the country and is located on the west coast of the island. Colombo is a bustling metropolis with a mix of modern skyscrap"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "The capital of Sri Lanka is Colombo. It is the largest city in the country and is located on the west coast of the island. Colombo is a bustling metropolis with a mix of modern skyscrap"
+        }
+    ]
+}

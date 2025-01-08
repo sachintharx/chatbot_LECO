@@ -8,9 +8,9 @@ def check_session_timeout(session):
     """
     current_time = time.time()
     last_activity = session.get('last_activity', current_time)
-
+    
     # If inactive for 30 seconds or more, end the session
-    if current_time - last_activity >= 300:
+    if current_time - last_activity >= 360000:
         # Save chat history before clearing session
         if session.get('chat_history'):
             save_chat_history(

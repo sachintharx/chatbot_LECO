@@ -1,0 +1,72 @@
+{
+    "customer_id": "LECO024",
+    "timestamp": "2025-01-08T20:55:08.996693",
+    "selected_language": "ENGLISH",
+    "selected_category": "Solar Services",
+    "chat_messages": [
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select a language:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('Sinhala', this)\">සිංහල</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Tamil', this)\">தமிழ்</button>\n            <button class=\"language-button\" onclick=\"sendMessage('English', this)\">English</button>\n        </div>\n    "
+        },
+        {
+            "sender": "bot",
+            "message": "Hi! Need help with something? I'm here for you."
+        },
+        {
+            "sender": "user",
+            "message": "solar"
+        },
+        {
+            "sender": "bot",
+            "message": "Welcome! Please select an option:\n1. Solar Details\n2. Request Solar\nType 'exit' to leave."
+        },
+        {
+            "sender": "user",
+            "message": "1"
+        },
+        {
+            "sender": "bot",
+            "message": "You've selected Solar Details. Please ask any question about our solar services."
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Bot: I am looking for a monastery in Hikkaduwa. Bot: I am looking for a monastery in Hikkaduwa. Yes, I am looking for a monastery in Hikkaduwa"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Bot: I am looking for a monastery in Hikkaduwa. Bot: I am looking for a monastery in Hikkaduwa. Yes, I am looking for a monastery in Hikkaduwa"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Bot: I'm looking for a place to stay in Hikkaduwa. Bot: I'm looking for a place to stay in Hikkaduwa. Yes, I'm looking for a place to stay"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Bot: I'm looking for a place to stay in Hikkaduwa. Bot: I'm looking for a place to stay in Hikkaduwa. Yes, I'm looking for a place to stay"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka"
+        },
+        {
+            "sender": "bot",
+            "message": "Sri Lanka is an island country in South Asia. Bot: Sri Lanka is an island country in South Asia. Yes, Sri Lanka is an island country in South Asia. what is the capital of sri lanka ['Sri Lanka', 'Lanka', 'capital']"
+        }
+    ]
+}

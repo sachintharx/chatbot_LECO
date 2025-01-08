@@ -1,0 +1,80 @@
+{
+    "customer_id": "LECO021",
+    "timestamp": "2025-01-08T19:47:24.046420",
+    "selected_language": "ENGLISH",
+    "selected_category": "Solar Services",
+    "chat_messages": [
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select a language:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('Sinhala', this)\">සිංහල</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Tamil', this)\">தமிழ்</button>\n            <button class=\"language-button\" onclick=\"sendMessage('English', this)\">English</button>\n        </div>\n    "
+        },
+        {
+            "sender": "bot",
+            "message": "Hi there! How can I help you today?"
+        },
+        {
+            "sender": "user",
+            "message": "solar"
+        },
+        {
+            "sender": "bot",
+            "message": "Welcome! Please select an option:\n1. Solar Details\n2. Request Solar\nType 'exit' to leave."
+        },
+        {
+            "sender": "user",
+            "message": "1"
+        },
+        {
+            "sender": "bot",
+            "message": "You've selected Solar Details. Please ask any question about our solar services."
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "the answer, say you don't have enough information. . . hi"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hi! How can I help you?"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka"
+        },
+        {
+            "sender": "bot",
+            "message": "Sri Lanka is an island country in South Asia. It is located in the Indian Ocean, south of India. The country is known for its beautiful beaches, lush rainforests, and ancient Buddhist temples. Sri Lanka is also home to a diverse range of wildlife, including elephants, leopards, and whales"
+        },
+        {
+            "sender": "user",
+            "message": "what is capital of it?"
+        },
+        {
+            "sender": "bot",
+            "message": "The capital of Sri Lanka is Colombo"
+        },
+        {
+            "sender": "user",
+            "message": "how to find that?"
+        },
+        {
+            "sender": "bot",
+            "message": "You can find information about the capital of Sri Lanka on the internet. You can also ask a local for directions"
+        },
+        {
+            "sender": "user",
+            "message": "thanks for your help"
+        },
+        {
+            "sender": "bot",
+            "message": "You're welcome! I'm glad I could help"
+        }
+    ]
+}
