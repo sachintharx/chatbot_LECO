@@ -4,7 +4,7 @@ from .connectionRequest import handle_connection_request
 from .bill_inquiries import handle_bill_inquiries
 from .english.en_fault_reporting import handle_fault_reporting
 from .english.en_incident_reports import handle_incident_reports
-from .english.en_solar_services import handle_solar_services
+from .solar_services import handle_solar_services
 
 # Rule-based response function
 def rule_based_response(category, user_message=None, session=None, language='english'):
