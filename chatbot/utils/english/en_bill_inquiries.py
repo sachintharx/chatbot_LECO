@@ -1,5 +1,6 @@
 
 from ...models import TreeNode
+from ..chat_histories import update_chat_history
 import random
 import re
 from datetime import datetime

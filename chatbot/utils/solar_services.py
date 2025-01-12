@@ -7,8 +7,8 @@ from .tamil.ta_connectionRequest import ConnectionRequestTree_TA
 def handle_solar_services(user_message, session):
     language = session.get('selected_language', 'unknown')
     if language.lower() == 'english':
-        bill_inquiries_tree = SolarServicesTree_EN()
-        return bill_inquiries_tree.handle_state(user_message, session)
+        solar = SolarServicesTree_EN()
+        return solar.handle_state(user_message, session)
     elif language.lower() == 'sinhala':
         connection_tree = ConnectionRequestTree_SI()
         return connection_tree.handle_state(user_message, session)

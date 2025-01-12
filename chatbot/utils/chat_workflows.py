@@ -3,7 +3,6 @@ import random
 from .connectionRequest import handle_connection_request
 from .bill_inquiries import handle_bill_inquiries
 from .fault_and_incident import handle_fault_and_incident_reporting
-from .english.en_incident_reports import handle_incident_reports
 from .solar_services import handle_solar_services
 
 # Rule-based response function
@@ -18,7 +17,7 @@ def rule_based_response(category, user_message=None, session=None, language='eng
         return handle_fault_and_incident_reporting(user_message, session)
         
     elif category == 'Incident Reports':
-        return handle_fault_and_incident_reporting(user_message, session)
+        return handle_fault_and_incident_reporting(user_message, session)      
     
     elif category == 'Solar Services':
         return handle_solar_services(user_message, session)
@@ -33,3 +32,4 @@ def rule_based_response(category, user_message=None, session=None, language='eng
         return random.choice(greetings_responses)
     
     return "I'm not sure how to respond to that. Could you clarify?"
+
