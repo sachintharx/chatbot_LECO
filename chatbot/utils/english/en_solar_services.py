@@ -19,6 +19,7 @@ class SolarServicesTree_EN:
     def handle_state(self, user_message, session):
         if 'exit' in user_message.lower():
             session['current_state'] = 'exit'
+            
 
         # Default to the initial selection if no state is found
         current_state = session.get('current_state', 'initial_selection')

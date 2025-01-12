@@ -1,0 +1,192 @@
+{
+    "customer_id": "LECO027",
+    "timestamp": "2025-01-09T13:03:17.826437",
+    "selected_language": "ENGLISH",
+    "selected_category": "Solar Services",
+    "chat_messages": [
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select a language:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('Sinhala', this)\">සිංහල</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Tamil', this)\">தமிழ்</button>\n            <button class=\"language-button\" onclick=\"sendMessage('English', this)\">English</button>\n        </div>\n    "
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! How can LECO assist you today?"
+        },
+        {
+            "sender": "user",
+            "message": "solar"
+        },
+        {
+            "sender": "bot",
+            "message": "Welcome! Please select an option:\n1. Solar Details\n2. Request Solar\nType 'exit' to leave."
+        },
+        {
+            "sender": "user",
+            "message": "1"
+        },
+        {
+            "sender": "bot",
+            "message": "You've selected Solar Details. Please ask any question about our solar services."
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! I'm here to help you. I'm currently learning about the habitat of the monks in Hikkaduwa, Sri Lanka. How can I assist you today?"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Error: 500, Unable to get response from the chatbot."
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! I'm here to help you. I'm currently learning about the habitat of the monks in Hikkaduwa, Sri Lanka. How can I assist you today?"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! I'm here to help you. I'm currently learning about the habitat of the monks in Hikkaduwa, Sri Lanka. How can I assist you today?"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka"
+        },
+        {
+            "sender": "bot",
+            "message": "Sri Lanka, also known as Lanka, is an island country in South Asia. It is located in the Indian Ocean, southwest of the Bay of Bengal and southeast of the Arabian Sea. It is known for its diverse culture, rich history, and beautiful landscapes, including beaches, rainforests, and ancient temples"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! I'm here to help you. I'm currently learning about the habitat of the monks in Hikkaduwa, Sri Lanka. How can I assist you today?"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka?"
+        },
+        {
+            "sender": "bot",
+            "message": "Sri Lanka, also known as Lanka or Serendib, is an island country located in South Asia. It is situated in the Indian Ocean, southwest of the Bay of Bengal and southeast of the Arabian Sea. Sri Lanka is known for its diverse culture, rich history, and beautiful landscapes, including its beaches, rainforests, and ancient temples. The capital city of Sri Lanka is Sri Jayawardenepura Kotte, while the"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! How can I assist you today?"
+        },
+        {
+            "sender": "user",
+            "message": "tell me about bio"
+        },
+        {
+            "sender": "bot",
+            "message": "I can help you with information related to bioinformatics, biotic organisms, biochemistry, or general information about a specific biological topic. What specific area are you interested in? ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+        },
+        {
+            "sender": "user",
+            "message": "what is bio"
+        },
+        {
+            "sender": "bot",
+            "message": "Bio can refer to various things depending on the context. It can refer to biotic organisms, which are living organisms that have the ability to grow, reproduce, and respond to their environment. It can also refer to biochemistry, the study of chemical processes within and between living organisms. If you meant something specific, please let me know. ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+        },
+        {
+            "sender": "user",
+            "message": "bio meaning?"
+        },
+        {
+            "sender": "bot",
+            "message": "Bio can refer to various things depending on the context. It can refer to biotic organisms, which are living organisms that have the ability to grow, reproduce, and respond to their environment. It can also refer to biochemistry, the study of chemical processes within and between living organisms. If you meant something specific, please let me know. ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+        },
+        {
+            "sender": "user",
+            "message": "okay"
+        },
+        {
+            "sender": "bot",
+            "message": "I'm glad you found the information helpful! If you have any other questions or need further clarification, feel free to ask. I'm here to help! ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------"
+        },
+        {
+            "sender": "user",
+            "message": "okay"
+        },
+        {
+            "sender": "bot",
+            "message": "I'm excellent at helping you find answers to your questions! How can I assist you today?"
+        },
+        {
+            "sender": "user",
+            "message": "what is bio?"
+        },
+        {
+            "sender": "bot",
+            "message": "In biology, \"bio\" is short for \"biology,\" which is the study of living organisms and their interactions with each other and their environment. It involves understanding the structure, function, growth, evolution, and distribution of organisms. Is there anything else you would like to know about biology or any other topic? I'm here to help! If you have any other questions, feel free to ask! If you're satisfied with the answer"
+        },
+        {
+            "sender": "user",
+            "message": "okay thanks"
+        },
+        {
+            "sender": "bot",
+            "message": "You're welcome! I'm glad I could help. I'm here to assist you whenever you need help. If you have any other questions, feel free to ask! If you're satisfied with the answer, please let me know so I can help someone else. Have a great day!"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "I encountered an error processing your question: (ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')), '(Request ID: e8c5ccc5-7eb2-4808-aa9c-63d1620defa2)')"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! How can I assist you today?"
+        },
+        {
+            "sender": "user",
+            "message": "biology concept"
+        },
+        {
+            "sender": "bot",
+            "message": "I can help you with various biology concepts. Please specify the concept you need help with. For example, I can explain the process of photosynthesis, the structure of a cell, or the process of cell division. What would you like to know? If you need help with something else, feel free to ask! If you have a specific question in mind, that would be great. If you don't have a specific question,"
+        },
+        {
+            "sender": "user",
+            "message": "photosynthesis"
+        },
+        {
+            "sender": "bot",
+            "message": "I encountered an error processing your question: (ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')), '(Request ID: 060fc0b3-0c2a-4e9d-a47e-deec448edea6)')"
+        },
+        {
+            "sender": "user",
+            "message": "photosynthesis"
+        },
+        {
+            "sender": "bot",
+            "message": "An error occurred while fetching the chatbot response: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))"
+        }
+    ]
+}

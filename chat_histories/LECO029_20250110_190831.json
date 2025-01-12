@@ -1,0 +1,480 @@
+{
+    "customer_id": "LECO029",
+    "timestamp": "2025-01-10T19:08:31.740318",
+    "selected_language": "ENGLISH",
+    "selected_category": "Solar Services",
+    "chat_messages": [
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select a language:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('Sinhala', this)\">සිංහල</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Tamil', this)\">தமிழ்</button>\n            <button class=\"language-button\" onclick=\"sendMessage('English', this)\">English</button>\n        </div>\n    "
+        },
+        {
+            "sender": "bot",
+            "message": "Hi there! How can I help you today?"
+        },
+        {
+            "sender": "user",
+            "message": "I need to buy solar system"
+        },
+        {
+            "sender": "bot",
+            "message": "Welcome! Please select an option:\n1. Solar Details\n2. Request Solar\nType 'exit' to leave."
+        },
+        {
+            "sender": "user",
+            "message": "1"
+        },
+        {
+            "sender": "bot",
+            "message": "You've selected Solar Details. Please ask any question about our solar services."
+        },
+        {
+            "sender": "user",
+            "message": "how to install solar system"
+        },
+        {
+            "sender": "bot",
+            "message": "1. Research and choose a suitable solar panel system for your needs. 2. Obtain necessary permits and approvals from your local government. 3. Hire a professional solar installer or do it yourself if you have the necessary skills. 4. Install the solar panels on a south-facing roof with minimal shading. 5. Connect the solar system to your electrical panel and the utility grid. 6. Monitor the system regularly to ensure"
+        },
+        {
+            "sender": "user",
+            "message": "what is PV"
+        },
+        {
+            "sender": "bot",
+            "message": "1. PV stands for Photovoltaic, which is a technology that converts sunlight directly into electricity. 2. Photovoltaic cells are the building blocks of solar panels, and they are made of semiconducting materials like silicon. 3. When sunlight hits the PV cells, it creates an electric field that generates electricity. 4. PV systems are commonly used for powering homes, businesses, and electric vehicles"
+        },
+        {
+            "sender": "user",
+            "message": "safety of solar PV systems"
+        },
+        {
+            "sender": "bot",
+            "message": "1. Solar PV systems are generally safe when installed and maintained properly. 2. However, there are potential hazards such as electrical shock, fire, and falling from heights during installation. 3. It is important to follow safety guidelines and precautions when working with solar PV systems. 4. Always wear appropriate personal protective equipment (PPE) such as gloves, safety glasses, and non-conductive footwear. 5. Ensure that the"
+        },
+        {
+            "sender": "user",
+            "message": "Standard test conditions (STC)"
+        },
+        {
+            "sender": "bot",
+            "message": "1. Standard Test Conditions (STC) are a set of standardized conditions used to measure the performance of solar panels. 2. STC includes an irradiance of 1000 watts per square meter, an air mass of 1.5, and a cell temperature of 25 degrees Celsius. 3. These conditions are used to compare the efficiency of different solar panels and to determine their power output under ideal conditions. 4"
+        },
+        {
+            "sender": "user",
+            "message": "DC junction box"
+        },
+        {
+            "sender": "bot",
+            "message": "1. A DC junction box is a device used to connect and protect the wiring of a direct current (DC) electrical system. 2. It is typically used in solar panel systems to connect the wires from multiple solar panels to a single output wire. 3. The junction box also provides a means to fuse the wires and to protect against electrical shorts. 4. It is important to choose a junction box that is rated for the appropriate voltage"
+        },
+        {
+            "sender": "user",
+            "message": "are you answering using context ?"
+        },
+        {
+            "sender": "bot",
+            "message": "1. Yes, I am answering using the provided context. 2. I am able to provide information based on the questions and context that have been provided. 3. If the context is not sufficient to answer a question, I will let the user know that I don't have enough information. 4. I am designed to maintain a friendly and professional tone, and to provide accurate and helpful responses"
+        },
+        {
+            "sender": "user",
+            "message": "give somury of your context"
+        },
+        {
+            "sender": "bot",
+            "message": "1. The context provided so far includes information about solar panel systems, photovoltaic (PV) technology, safety guidelines for working with solar PV systems, standard test conditions (STC), and a DC junction box. 2. The context also includes questions about how to install a solar system, what PV is, the safety of solar PV systems, and STC. 3. The context does not include any information about Sri Lanka or its"
+        },
+        {
+            "sender": "user",
+            "message": "give summary of your context"
+        },
+        {
+            "sender": "bot",
+            "message": "I am a helpful assistant . My current context includes a summary of the information I have been provided. If you have any specific questions, feel free to ask!"
+        },
+        {
+            "sender": "user",
+            "message": "how to install solar"
+        },
+        {
+            "sender": "bot",
+            "message": "To install solar, you typically need to follow these steps: 1. Assess your energy needs and the amount of sunlight your property receives. 2. Choose the right solar system for your needs, considering factors like the size of the system, the type of solar panels, and the inverter. 3. Obtain necessary permits and approvals from your local government. 4. Hire a licensed solar installer to install the system. 5"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! How can I assist you today?"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka?"
+        },
+        {
+            "sender": "bot",
+            "message": "Sri Lanka is an island country located in South Asia. It is situated in the Indian Ocean, off the southeastern coast of India. It is known for its diverse culture, rich history, and beautiful landscapes, including beaches, rainforests, and ancient temples. The capital city of Sri Lanka is Sri Jayawardenepura Kotte, but the largest city is Colombo. The official language is Sinhala, and the currency is the Sri L"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! How can I help you today?"
+        },
+        {
+            "sender": "user",
+            "message": "solar"
+        },
+        {
+            "sender": "bot",
+            "message": "I can provide information related to the Guideline on Rooftop Solar PV Installation in Sri Lanka. This document provides requirements and recommendations for the installation of solar PV systems on buildings. It covers topics such as the inclination of PV modules, DC circuit installation, and routine maintenance checklists. If you have a specific question about solar PV systems, feel free to ask!"
+        },
+        {
+            "sender": "user",
+            "message": "sri lanka"
+        },
+        {
+            "sender": "bot",
+            "message": "Sri Lanka is an island nation located in South Asia, known for its rich cultural heritage, stunning natural beauty, and vibrant festivals. The country has a history dating back over 2,500 years, with influences from various colonial powers, including the Portuguese, Dutch, and British. Sri Lanka gained independence in 1948 but has faced challenges, including a decades-long civil war that ended in 2009. Despite these challenges, Sri Lanka"
+        },
+        {
+            "sender": "user",
+            "message": "what kind of context do you have?"
+        },
+        {
+            "sender": "bot",
+            "message": "The context provided is about Sri Lanka, its history, culture, natural beauty, and tourist destinations. It also includes some technical terms related to electrical installations and PV systems"
+        },
+        {
+            "sender": "user",
+            "message": "what kind of context do you have?"
+        },
+        {
+            "sender": "bot",
+            "message": "I currently have the context of an example, a situation where something cannot be avoided, a checklist of what to do in case of a system failure, and I am willing to do regular tasks. How can I assist you today?"
+        },
+        {
+            "sender": "user",
+            "message": "what kind of context do you have?"
+        },
+        {
+            "sender": "bot",
+            "message": "I currently have the context of an example, a situation where something cannot be avoided, a checklist of what to do in case of a system failure, and I am willing to do regular tasks. How can I assist you today?"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! How can I assist you today regarding the Solar PV system as per the SLS1522?"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka?"
+        },
+        {
+            "sender": "bot",
+            "message": "Sri Lanka is an island country located in South Asia, off the southeastern coast of the Indian subcontinent. It is known for its diverse culture, rich history, and beautiful landscapes. How can I assist you further?"
+        },
+        {
+            "sender": "user",
+            "message": "solar"
+        },
+        {
+            "sender": "bot",
+            "message": "PV stands for Photovol"
+        },
+        {
+            "sender": "user",
+            "message": "how to install solar"
+        },
+        {
+            "sender": "bot",
+            "message": "To install a solar PV system, you need to follow these steps: 1. Site assessment: Determine the suitability of the site for solar installation, considering factors such as sunlight exposure, shading, and local regulations. 2. System design: Based on the site assessment, design the solar PV system to meet your energy needs. This includes selecting the right type and size of solar panels, inverters, and batteries. 3. Permits and appro"
+        },
+        {
+            "sender": "user",
+            "message": "explain 1st step"
+        },
+        {
+            "sender": "bot",
+            "message": "The first step in installing a solar PV system is site assessment. This involves determining the suitability of the site for solar installation. Factors that are considered during site assessment include sunlight exposure, shading, and local regulations. The site assessment helps to ensure that the solar PV system is installed in an optimal location to maximize its efficiency and lifespan"
+        },
+        {
+            "sender": "user",
+            "message": "okay thanks"
+        },
+        {
+            "sender": "bot",
+            "message": "You're welcome! If you have any other questions, feel free to ask. I'm here to help. Have a great day!"
+        },
+        {
+            "sender": "user",
+            "message": "now tell me about sri lanka"
+        },
+        {
+            "sender": "bot",
+            "message": "I encountered an error processing your question: 422 Client Error: Unprocessable Entity for url: https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.3 (Request ID: Z7LTZJnUluUqlmF6_FBSM) Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32768. Given: 51645 `inputs` tokens and 100 `max_new_tokens` Make sure 'text-generation' task is supported by the model"
+        },
+        {
+            "sender": "user",
+            "message": "what is the capital of it"
+        },
+        {
+            "sender": "bot",
+            "message": "I encountered an error processing your question: 422 Client Error: Unprocessable Entity for url: https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.3 (Request ID: UKYmyCcEPSW-cd4WhyQ6K) Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32768. Given: 51653 `inputs` tokens and 100 `max_new_tokens` Make sure 'text-generation' task is supported by the model"
+        },
+        {
+            "sender": "user",
+            "message": "now tell me about sri lanka"
+        },
+        {
+            "sender": "bot",
+            "message": "Sri Lanka, officially known as the Democratic Socialist Republic of Sri Lanka, is an island nation located in South Asia. It is situated in the Indian Ocean, southwest of the Bay of Bengal and southeast of the Arabian Sea. Sri Lanka has a rich history dating back over 2,500 years, with significant cultural, religious, and architectural influences from various civilizations, including the Sinhalese, Tamil, and European powers. The country"
+        },
+        {
+            "sender": "user",
+            "message": "what is the capital of it"
+        },
+        {
+            "sender": "bot",
+            "message": "The capital of Sri Lanka is Sri Jayawardenepura Kotte, but the administrative and commercial center is Colombo. Sri Jayawardenepura Kotte is the official capital, while Colombo is the largest city and the main hub for business and tourism"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! How can I assist you today? I have some information about Solar PV systems and their requirements as per the SLS1522"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka?"
+        },
+        {
+            "sender": "bot",
+            "message": "Sri Lanka is an island country located in South Asia. It is known for its diverse culture, beautiful landscapes, and rich history. It was previously known as Ceylon"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! I'm here to help you. I'm currently learning about the habitat of the green sea turtle in Hikkaduwa, Sri Lanka, specifically at the Monasteri. How can I assist you today?"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! How can I assist you today? Is there a specific question or topic you'd like to discuss related to contacts, high (as in elevation, altitude, or frequency), false (as in false information, misconceptions, or falsehoods), or bonds (as in financial bonds or chemical bonds)? I'm here to help!"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! How can I assist you today? Is there a specific question or topic you'd like to discuss related to contacts, high (as in elevation, altitude, or frequency), false (as in false information, misconceptions, or falsehoods), or bonds (as in financial bonds or chemical bonds)? I'm here to help! hi ['contact', 'high', '3. False',"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka?"
+        },
+        {
+            "sender": "bot",
+            "message": "Sri Lanka, also known as Lanka or Sri, is an island country in South Asia. It is located in the Indian Ocean, southwest of the Bay of Bengal and southeast of the Arabian Sea. Sri Lanka is known for its rich history, diverse culture, and beautiful landscapes, including its beaches, rainforests, and ancient temples. The capital city of Sri Lanka is Sri Jayawardenepura Kotte, while the largest city is"
+        },
+        {
+            "sender": "user",
+            "message": "biology"
+        },
+        {
+            "sender": "bot",
+            "message": "Biology is the scientific study of living organisms and their characteristics, processes, and interactions with the environment. It is a broad field that encompasses many sub-disciplines, including cellular biology, genetics, evolution, ecology, and physiology. Biology seeks to understand the fundamental principles that govern life and apply this knowledge to solve real-world problems, such as developing new medicines, understanding the impacts of climate change on ecosystems, and improving agricultural practices"
+        },
+        {
+            "sender": "user",
+            "message": "what are the context do you using?"
+        },
+        {
+            "sender": "bot",
+            "message": "The context I am using is the information and knowledge that I have been provided with, as well as any additional information that is relevant to the conversation. This context helps me to understand the topic or question being discussed and to provide accurate and helpful responses. The context can include specific facts, concepts, or ideas that are related to the conversation, as well as any assumptions or background information that may be necessary to understand the discussion. I am constantly updating my context as new information is provided or as the conversation"
+        },
+        {
+            "sender": "user",
+            "message": "okay thanks"
+        },
+        {
+            "sender": "bot",
+            "message": "You're welcome! I'm glad I could help. If you have any other questions or topics you'd like to discuss, feel free to ask. I'm here to help whenever you need it. I strive to provide correct and helpful responses, so please let me know if there's anything I can do to improve. Have a great day!"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! How can I help you today?"
+        },
+        {
+            "sender": "user",
+            "message": "th"
+        },
+        {
+            "sender": "bot",
+            "message": "The letter 'th' represents the numbers fifty and twenty-five in words"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! How can I assist you today?"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! How can I assist"
+        },
+        {
+            "sender": "user",
+            "message": "sds"
+        },
+        {
+            "sender": "bot",
+            "message": "I'm sorry, I didn't understand your question. Could you please rephrase it or provide more context? sds"
+        },
+        {
+            "sender": "user",
+            "message": "d"
+        },
+        {
+            "sender": "bot",
+            "message": "An error occurred while fetching the chatbot response: HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002BE533167E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+        },
+        {
+            "sender": "user",
+            "message": "gf"
+        },
+        {
+            "sender": "bot",
+            "message": "An error occurred while fetching the chatbot response: HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002BE531AE6F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "An error occurred while fetching the chatbot response: HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002BE531AE2D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! It's nice to meet you. How can I assist you today?"
+        },
+        {
+            "sender": "user",
+            "message": "what kind of context do you have?"
+        },
+        {
+            "sender": "bot",
+            "message": "I have context based on our previous interactions, which includes being met, contact, and being in Sri. How can I use this context to help you today?"
+        },
+        {
+            "sender": "user",
+            "message": "do you have context about solar?"
+        },
+        {
+            "sender": "bot",
+            "message": "I don't have specific context about solar energy, but I can help you find information about it. What would you like to know about solar energy?"
+        },
+        {
+            "sender": "user",
+            "message": "no wait , I will provide it"
+        },
+        {
+            "sender": "bot",
+            "message": "Please go ahead and provide the context about solar energy, and I'll do my best to help you with your question"
+        },
+        {
+            "sender": "user",
+            "message": "okay thanks"
+        },
+        {
+            "sender": "bot",
+            "message": "You're welcome! If you have any other questions or need further assistance, feel free to ask. I'm here to help. Here's a simple diagram of a solar panel system: 1. Solar panels convert sunlight into direct current (DC) electricity. 2. The DC electricity is then converted into alternating current (AC) electricity by an inverter. 3. The AC electricity is sent to your home's electrical panel, where"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! How can I assist you today?"
+        },
+        {
+            "sender": "user",
+            "message": "what kind of context do you have?"
+        },
+        {
+            "sender": "bot",
+            "message": "The context provided includes a variety of topics such as reasoning, brain studies, animations, career connections, and cultural diversity in Sri Lanka"
+        },
+        {
+            "sender": "user",
+            "message": "do you have context of solar and bio"
+        },
+        {
+            "sender": "bot",
+            "message": "Yes, the context provided includes information about energy and metabolism, which includes solar energy and photosynthesis, a process used by plants to convert sunlight into chemical energy. However, there is no specific context about bioenergy"
+        },
+        {
+            "sender": "user",
+            "message": "I mean biology"
+        },
+        {
+            "sender": "bot",
+            "message": "Yes, the context provided includes information about biology, which is the science that studies living organisms and their interactions with one another and their environments. It includes various fields such as physiology, ecology, and biotechnology"
+        },
+        {
+            "sender": "user",
+            "message": "thats all?"
+        },
+        {
+            "sender": "bot",
+            "message": "The context provided primarily focuses on electrical engineering, specifically on verification reports, battery sizing, labeling, and PV installation protection. There is no specific context about biology"
+        },
+        {
+            "sender": "user",
+            "message": "okay thanks"
+        },
+        {
+            "sender": "bot",
+            "message": "You're welcome! If you have any other questions, feel free to ask. Have a great day!"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! I'm here to help you. I'm currently learning about the habitat of the green sea turtle in Hikkaduwa, Sri Lanka, specifically at the Monasteri. How can I assist you today?"
+        }
+    ]
+}
