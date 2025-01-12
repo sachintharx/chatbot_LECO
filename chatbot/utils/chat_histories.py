@@ -108,3 +108,10 @@ if __name__ == "__main__":
     ]
     
     save_chat_history(customer_id, language, category, messages)
+
+
+def update_chat_history(session, sender, message):
+    if 'chat_history' not in session:
+        session['chat_history'] = []
+    session['chat_history'].append({'sender': sender, 'message': message})
+    session.modified = True

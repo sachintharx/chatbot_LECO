@@ -1,4 +1,5 @@
 from ...models import TreeNode
+from ..chat_histories import update_chat_history
 import random
 import json
 
@@ -138,9 +139,12 @@ def extract_district(message):
 
 
 def extract_town(message):
-    sl_towns = [
-        "Hindagala","Peradeniya" 
-    ]
+    sl_towns = ["Hindagala", "Peradeniya", "Kandy", "Gampola", "Kolonnawa","Wellampitiya",  "Gothatuwa", "Orugodawatta","Dematagoda",
+             "Grandpass", "Mattakkuliya",  "Modara","Bloemendhal","Kotahena","Fort","Pettah","Maradana",  "Slave Island","Borella",
+            "Cinnamon Gardens","Thimbirigasyaya","Havelock Town","Kirulapone","Narahenpita","Pamankada","Wellawatte","Bambalapitiya","Kollupitiya",
+            "Dehiwala","Mount Lavinia","Ratmalana","Moratuwa","Panadura","Keselwatta","Hulftsdorp","Kompannaveediya","Kochchikade","Mutwal","Lunawa",
+             "Angulana","Egoda Uyana","Rawatawatte","Soysapura","Kohuwala","Nugegoda","Nawala","Rajagiriya","Battaramulla","Malabe""Kaduwela","Athurugiriya","Homagama",
+             "Maharagama", "Kottawa", "Piliyandala","Kesbewa"]
     for town in sl_towns:
         if town.lower() in message.lower():
             return town
@@ -177,11 +181,6 @@ def load_towns_from_json(json_file):
 #             return town
 #     return None
 
-def update_chat_history(session, sender, message):
-    if 'chat_history' not in session:
-        session['chat_history'] = []
-    session['chat_history'].append({'sender': sender, 'message': message})
-    session.modified = True
 
 
 

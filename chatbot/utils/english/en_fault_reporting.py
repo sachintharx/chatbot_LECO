@@ -1,17 +1,15 @@
 
 from ...models import TreeNode
-from .en_connectionRequest import update_chat_history
+from ..chat_histories import update_chat_history
 import random
 import re
 from datetime import datetime
 from typing import Optional, Dict, Any
 import json
 
-def handle_fault_reporting(user_message, session):
-    fault_tree = FaultReportingTree_EN()
-    return fault_tree.handle_state(user_message, session)
 
-class FaultReportingTree_EN:
+
+class Fault_and_Incident_ReportingTree_EN:
     def __init__(self):
         # Initialize nodes
         self.root = TreeNode('awaiting_district', self.awaiting_district)
@@ -111,7 +109,7 @@ class FaultReportingTree_EN:
             session['current_state'] = 'confirm_details'
             response = self._generate_confirmation(session)
         else:
-            response = ("Please specify the type of electrical fault:\n\n"
+            response = ("Please specify the type of electrical fault:\n"
                        "1. Power failure\n"
                        "2. Voltage issue\n"
                        "3. Broken line\n"
@@ -184,14 +182,19 @@ class FaultReportingTree_EN:
 
     def _generate_confirmation(self, session):
         identifier_type = "Account Number" if session.get('identifier_type') == 'account' else "Contact Number"
-        return (
-            "Please confirm if these details:\n"
-            f"District: {session.get('district')}\n"
-            f"Town: {session.get('town')}\n"
-            f"{identifier_type}: {session.get('identifier')}\n"
-            f"Fault Type: {session.get('fault_type')}\n\n"
-            "Reply 'yes' to confirm or 'no' to make corrections."
-        )
+        return f"""
+        <div>
+            <p>Please confirm if these details are correct:</p>
+           
+            <p>District: {session.get('district')}</p>
+            <p>Town: {session.get('town')}</p>
+            <p>{identifier_type}: {session.get('identifier')}</p>
+            <p>Fault Type: {session.get('fault_type')}</p>
+            
+            <button class="language-button" onclick="sendMessage('yes', this)">Yes</button>
+            <button class="language-button" onclick="sendMessage('no', this)">No</button>
+        </div>
+        """
 
     def _generate_summary(self, session):
         identifier = session.get('identifier', '')
@@ -201,15 +204,19 @@ class FaultReportingTree_EN:
         
         return (
             
-            f"******Fault Report Summary******\n" 
-            f"District: {session.get('district')}\n"
-            f"Town: {session.get('town')}\n"
-            f"{identifier_type}: {session.get('identifier')}\n"
-            f"Fault Type: {session.get('fault_type')}\n"
-            f"Reference Number: {ref_number}\n\n"
-            
-            f"Status : Your complaint has been registered. We will inform the relevant authorities for further action.Thank you!"
-            "We will contact you shortly with updates.\n" 
+        "FAULT REPORT SUMMARY \n"
+        
+        f"District: {session.get('district')}\n"
+        f"Town: {session.get('town')}\n"
+        f"{identifier_type}: {session.get('identifier')}\n"
+        f"Fault Type: {session.get('fault_type')}\n"
+        f"Reference Number: {ref_number}\n"
+        
+        "Status: Your complaint has been registered.\n"
+        "We will inform the relevant authorities\n"
+        "for further action. Thank you!\n"
+        "We will contact you shortly with updates.\n"
+        
         )
 
     def _handle_correction(self, session):
@@ -221,15 +228,19 @@ class FaultReportingTree_EN:
         return random.choice(responses)
 
     def _get_fault_type_prompt(self):
-        return ("What type of fault are you experiencing?\n\n"
-                "Please select from the following options:\n\n"
-                "1. Power failure\n"
-                "2. Voltage issue\n"
-                "3. Broken line\n"
-                "4. Transformer problem\n"
-                "5. Electric shock\n\n"
-                "6. Other\n\n"
-                "You can either type the fault type or enter the corresponding number.")
+        return """
+        <div>
+            <p>What type of fault are you experiencing?</p>
+            <p>Please select from the following options:</p>
+            <button class="language-button" onclick="sendMessage('Power failure', this)">1. Power failure</button>
+            <button class="language-button" onclick="sendMessage( 'Voltage issue',this)">2. Voltage issue</button>
+            <button class="language-button" onclick="sendMessage('Broken line', this)">3. Broken line</button>
+            <button class="language-button" onclick="sendMessage( 'Transformer problem',this)">4. Transformer problem</button>
+            <button class="language-button" onclick="sendMessage( 'Electric shock',this)">5. Electric shock</button>
+            <button class="language-button" onclick="sendMessage('Other', this)">6. Other</button>
+            <p>You can either type the fault type or enter the corresponding number.</p>
+        </div>
+    """
 
 def get_districts():
     return [
@@ -279,3 +290,59 @@ def load_towns_from_json(json_file):
     except Exception as e:
         print(f"Error loading JSON file: {e}")
         return []
+    
+
+# Main handler for incident reports
+def handle_incident_reports(user_message, session):
+    incident_tree = IncidentReportsTree()
+    return incident_tree.handle_state(user_message, session)
+
+class IncidentReportsTree:
+    def __init__(self):
+        self.root = TreeNode('awaiting_incident_location', self.awaiting_incident_location)
+        self.exit_node = TreeNode('exit', self.exit_request)
+        self.root.add_child('exit', self.exit_node)
+
+    def handle_state(self, user_message, session):
+        if 'exit' in user_message.lower():
+            session['current_state'] = 'exit'
+        current_state = session.get('current_state', 'awaiting_incident_location')
+        current_node = self._find_node(self.root, current_state)
+        if current_node:
+            response = current_node.handle(user_message, session)
+            return response
+        else:
+            return self.reset_incident_reports(session)
+
+    def _find_node(self, current_node, state_name):
+        if current_node.name == state_name:
+            return current_node
+        for child in current_node.children.values():
+            node = self._find_node(child, state_name)
+            if node:
+                return node
+        return None
+
+    def awaiting_incident_location(self, user_message, session):
+        session['incident_location'] = user_message
+        session['current_state'] = 'exit'
+        response = "Thank you for reporting the incident. Our team will look into it and get back to you shortly."
+        update_chat_history(session, "bot", response)
+        return response
+    
+    
+
+    def exit_request(self, user_message, session):
+        response = "Thank you for using our service. If you need further assistance, feel free to ask!"
+        update_chat_history(session, "bot", response)
+        session.clear()
+        return response
+
+    def reset_incident_reports(self, session):
+        session['current_state'] = 'awaiting_incident_location'
+        session['chat_history'] = []
+        response = "Can you provide the location of the incident?"
+        update_chat_history(session, "bot", response)
+        return response
+
+

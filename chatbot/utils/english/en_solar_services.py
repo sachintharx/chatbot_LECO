@@ -1,5 +1,5 @@
 from ...models import TreeNode
-from .en_connectionRequest import update_chat_history
+from ..chat_histories import update_chat_history
 import requests
 
 
@@ -120,3 +120,4 @@ class SolarServicesTree_EN:
         
         except Exception as e:
             return f"An error occurred while fetching the chatbot response: {str(e)}"
+

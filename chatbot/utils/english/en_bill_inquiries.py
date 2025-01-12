@@ -349,8 +349,3 @@ def generate_case_number():
 def generate_payment_id():
     return f"PAY{datetime.now().strftime('%Y%m%d%H%M%S')}"
 
-def update_chat_history(session, sender, message):
-    if 'chat_history' not in session:
-        session['chat_history'] = []
-    session['chat_history'].append({'sender': sender, 'message': message})
-    session.modified = True
