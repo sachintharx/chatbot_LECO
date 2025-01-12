@@ -1,9 +1,13 @@
+# chat_workflows.py 
 from __future__ import annotations
 import random
+
+from chatbot.utils import other_services
 from .connectionRequest import handle_connection_request
 from .bill_inquiries import handle_bill_inquiries
 from .fault_and_incident import handle_fault_and_incident_reporting
 from .solar_services import handle_solar_services
+from .other_services import handle_other_services
 
 # Rule-based response function
 def rule_based_response(category, user_message=None, session=None, language='english'):
@@ -21,6 +25,9 @@ def rule_based_response(category, user_message=None, session=None, language='eng
     
     elif category == 'Solar Services':
         return handle_solar_services(user_message, session)
+    
+    elif category == 'Other Services':
+        return handle_other_services(user_message, session)
     
     elif category == 'greetings':
         greetings_responses = [

@@ -1,9 +1,12 @@
+# fault_and_incident.py
+
 from .english.en_fault_reporting import Fault_and_Incident_ReportingTree_EN
 
 
 
 # In another file (e.g., utils/some_file.py)
 def handle_fault_and_incident_reporting(user_message, session):
+    
     language = session.get('selected_language', 'unknown')
     if language.lower() == 'english':
         fault_and_incident_tree = Fault_and_Incident_ReportingTree_EN()
