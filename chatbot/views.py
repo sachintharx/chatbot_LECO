@@ -309,6 +309,7 @@ def chat(request):
                 handler = handler_map.get(current_workflow)
                 if handler:
                     handler(user_message, session)
+                    
     else:
         # Predict category for user message
         try:
