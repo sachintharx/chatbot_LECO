@@ -345,3 +345,5 @@ def chat(request):
 
 def index(request):
     return render(request, 'index.html')
+
+# python manage.py runserver
