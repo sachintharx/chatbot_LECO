@@ -95,7 +95,7 @@ class SolarServicesTree_EN:
     
     def fetch_chatbot_response(self, user_message, session):
     
-        api_url = "http://localhost:8001/chat/"  # URL of the FastAPI endpoint
+        api_url = "http://localhost:8001/chat/"  
         payload = {
             "question": user_message,
             "session_id": session.get("session_id", "default")  # Default session if not provided
