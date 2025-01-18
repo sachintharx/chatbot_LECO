@@ -1,50 +1,52 @@
-
-from ...models import TreeNode
 from ..chat_histories import update_chat_history
 import random
 import re
 from datetime import datetime
-import pandas as pd
+import requests
+# from chatbot.models import TreeNode
 
+class TreeNode:
+    def __init__(self, state, handler):
+        self.state = state
+        self.handler = handler
+        self.children = {}
 
-   
+    def add_child(self, state, node):
+        self.children[state] = node
+
+    def handle(self, user_message, session):
+        return self.handler(user_message, session)
 
 class BillInquiriesTree_EN:
     def __init__(self):
         # Initialize root node for service selection
         self.root = TreeNode('service_selection', self.service_selection)
         
-        # Verification nodes
+        # Bill Balance Check nodes
         self.verification_node = TreeNode('verification', self.verification)
         self.awaiting_verification_input_node = TreeNode('awaiting_verification_input', self.awaiting_verification_input)
-        
-        # Bill Balance Check nodes
+        self.contact_verification_node = TreeNode('contact_verification', self.contact_verification)
         self.display_balance_node = TreeNode('display_balance', self.display_balance)
+        self.make_payment_node = TreeNode('make_payment', self.make_payment)
         
         # Bill Dispute nodes
         self.dispute_reason_node = TreeNode('dispute_reason', self.dispute_reason)
         self.agent_transfer_node = TreeNode('agent_transfer', self.agent_transfer)
         
-        # Payment nodes
-        self.make_payment_node = TreeNode('make_payment', self.make_payment)
-        self.payment_confirmation_node = TreeNode('payment_confirmation', self.payment_confirmation)
-        self.payment_history_node = TreeNode('payment_history', self.payment_history)
-        
         # Exit node
         self.exit_node = TreeNode('exit', self.exit_request)
 
-        # Set up node transitions
+        # Set up node transitions for Bill Balance path
         self.root.add_child('verification', self.verification_node)
         self.verification_node.add_child('awaiting_verification_input', self.awaiting_verification_input_node)
-        self.awaiting_verification_input_node.add_child('display_balance', self.display_balance_node)
-        self.awaiting_verification_input_node.add_child('dispute_reason', self.dispute_reason_node)
-        self.dispute_reason_node.add_child('agent_transfer', self.agent_transfer_node)
+        self.awaiting_verification_input_node.add_child('contact_verification', self.contact_verification_node)
+        self.contact_verification_node.add_child('display_balance', self.display_balance_node)
         self.display_balance_node.add_child('make_payment', self.make_payment_node)
-        self.display_balance_node.add_child('payment_history', self.payment_history_node)
         self.display_balance_node.add_child('exit', self.exit_node)
-        self.make_payment_node.add_child('payment_confirmation', self.payment_confirmation_node)
-        self.payment_confirmation_node.add_child('exit', self.exit_node)
-        self.payment_history_node.add_child('exit', self.exit_node)
+        
+        # Set up node transitions for Bill Dispute path
+        self.root.add_child('dispute_reason', self.dispute_reason_node)
+        self.dispute_reason_node.add_child('agent_transfer', self.agent_transfer_node)
         self.agent_transfer_node.add_child('exit', self.exit_node)
 
     def handle_state(self, user_message, session):
@@ -57,22 +59,39 @@ class BillInquiriesTree_EN:
         if current_node:
             return current_node.handle(user_message, session)
         return self.reset_bill_inquiries(session)
+    
+    def reset_bill_inquiries(self, session):
+        session['current_state'] = 'service_selection'
+        response = "Let's start over. Please select a service option."
+        update_chat_history(session, "bot", response)
+        return self._split_message(response)
+
+    def _find_node(self, node, state):
+        if node.state == state:
+            return node
+        for child in node.children.values():
+            result = self._find_node(child, state)
+            if result:
+                return result
+        return None
 
     def service_selection(self, user_message, session):
-        # Handle numeric input
         if user_message.strip() == 'Bill Balance Check' or 'balance' in user_message.lower():
             session['service_type'] = 'balance'
             session['current_state'] = 'verification'
             response = (
                 "You've selected Bill Balance Check.\n\n"
-                "Please provide your 10-digit account number or registered mobile number:"
+                "Please provide your 10-digit account number:"
             )
         elif user_message.strip() == 'Bill Dispute' or 'dispute' in user_message.lower():
             session['service_type'] = 'dispute'
-            session['current_state'] = 'verification'
+            session['current_state'] = 'dispute_reason'
             response = (
                 "You've selected Bill Dispute.\n\n"
-                "Please provide your 10-digit account number or registered mobile number:"
+                "Please select the reason for your dispute:\n"
+                "1. Incorrect Charges\n"
+                "2. Overcharge\n"
+                "3. Other"
             )
         else:
             return """
@@ -80,7 +99,6 @@ class BillInquiriesTree_EN:
                     <p>Please select an option:</p>
                     <button class="language-button" onclick="sendMessage('Bill Balance Check', this)">Bill Balance Check</button>
                     <button class="language-button" onclick="sendMessage('Bill Dispute', this)">Bill Dispute</button>
-                    
                 </div>
             """
         
@@ -89,264 +107,158 @@ class BillInquiriesTree_EN:
 
     def verification(self, user_message, session):
         session['current_state'] = 'awaiting_verification_input'
-        service_type = "bill balance check" if session.get('service_type') == 'balance' else "bill dispute"
-        response = f"To proceed with your {service_type}, please provide your 10-digit account number or registered mobile number:"
+        response = "Please provide your 10-digit account number:"
         update_chat_history(session, "bot", response)
         return self._split_message(response)
 
     def awaiting_verification_input(self, user_message, session):
         account_number = extract_account_number(user_message)
-        mobile_number = extract_mobile_number(user_message)
         
-        if account_number or mobile_number:
-            session['identifier'] = account_number if account_number else mobile_number
-            if session.get('service_type') == 'balance':
-                session['current_state'] = 'display_balance'
-                return self.display_balance(user_message, session)
+        if account_number:
+            # Validate account number exists
+            account_validation_response = self.validate_account_number_with_api(account_number)
+            if account_validation_response.get('valid', False):
+                session['identifier'] = account_number
+                session['balance'] = account_validation_response.get('balance', 0.0)
+                session['current_state'] = 'contact_verification'
+                response = "Please provide your registered contact number:"
             else:
-                session['current_state'] = 'dispute_reason'
-                return self.dispute_reason(user_message, session)
+                response = "Invalid account number. Please provide a valid 10-digit account number."
+                session['current_state'] = 'verification'
+        else:
+            response = "Please provide a valid 10-digit account number."
         
-        response = "Please provide a valid 10-digit account number or registered mobile number."
         update_chat_history(session, "bot", response)
         return self._split_message(response)
 
-    def fetch_bill_balance(self, identifier):
-        # Mock database of bill balances
-        mock_database = {
-            '1234567890': 1234.56,
-            '9876543210': 789.01,
-            '5555555555': 2468.10,
-            '9999999999': 135.79
-        }
-        return mock_database.get(identifier)
+    def contact_verification(self, user_message, session):
+        contact_number = extract_mobile_number(user_message)
+        
+        if not contact_number:
+            response = "Please provide a valid contact number."
+            update_chat_history(session, "bot", response)
+            return self._split_message(response)
+
+        # Validate contact number with API
+        contact_validation_response = self.validate_contact_number_with_api(contact_number)
+        retrieved_account = contact_validation_response.get('account_number')
+        stored_account = session.get('identifier')
+
+        if retrieved_account and retrieved_account == stored_account:
+            session['contact_number'] = contact_number
+            session['current_state'] = 'display_balance'
+            return self.display_balance(user_message, session)
+        else:
+            response = "The provided contact number doesn't match with the account records. Please try again."
+            session['current_state'] = 'contact_verification'
+            update_chat_history(session, "bot", response)
+            return self._split_message(response)
+
+    def validate_account_number_with_api(self, account_number):
+        try:
+            response = requests.get(f"http://124.43.163.177:8080/CCLECO/Main/GetAccountBalance?accountNumber={account_number}")
+            if response.status_code == 200:
+                data = response.text.split(',')
+                if data[0] == "YES":
+                    return {'valid': True, 'balance': float(data[1])}
+        except (requests.exceptions.RequestException, IndexError, ValueError):
+            pass
+        return {'valid': False}
+
+    def validate_contact_number_with_api(self, contact_number):
+        try:
+            response = requests.get(f"http://124.43.163.177:8080/CCLECO/Main/GetAccountNumber?contactNumber={contact_number}")
+            if response.status_code == 200:
+                data = response.text.strip()
+                return {'account_number': data}
+        except (requests.exceptions.RequestException, IndexError):
+            pass
+        return {'account_number': None}
 
     def display_balance(self, user_message, session):
-        if user_message and user_message.strip() in ['1', '2', '3']:
-            return self.handle_balance_menu(user_message.strip(), session)
-            
         identifier = session.get('identifier')
-        if not identifier:
-            response = "Sorry, we couldn't find your account information. Please try again."
-            session['current_state'] = 'verification'
+        balance = session.get('balance')
+        contact_number = session.get('contact_number')
+        
+        if balance is not None:
+            response = (
+                "<div style='font-family: Arial, sans-serif; font-size: 12px;'>"
+                "<h3 style='font-size: 12px;'>Bill Balance Details</h3>"
+                f"<p><strong>Account Number:</strong> {identifier}</p>"
+                f"<p><strong>Registered Contact Number:</strong> {contact_number}</p>"
+                f"<p><strong>Current Balance:</strong> Rs. {balance:.2f}</p>"
+                "<h3 style='font-size: 12px;'>What would you like to do next?</h3>"
+                "<button class='language-button' onclick=\"sendMessage('make_payment', this)\" style='font-size: 12px;'>Make a payment</button>"
+                "<button class='language-button' onclick=\"sendMessage('exit', this)\" style='font-size: 12px;'>Exit</button>"
+                "</div>"
+            )
+
         else:
-            balance = self.fetch_bill_balance(identifier)
-            
-            if balance is not None:
-                response = (
-                    "=== Bill Balance Details ===\n\n"
-                    f"Account Number: {identifier}\n"
-                    f"Current Balance: Rs. {balance:.2f}\n\n"
-                    "What would you like to do next?\n"
-                )
-                response += """
-                <div>
-                    <p>Please select an option:</p>
-                    <button class="language-button" onclick="sendMessage('1', this)">Make a payment</button>
-                    <button class="language-button" onclick="sendMessage('2', this)">View payment history</button>
-                    <button class="language-button" onclick="sendMessage('3', this)">Exit</button>
-                </div>
-                """
-                session['balance'] = balance
-            else:
-                response = (
-                    f"Sorry, we couldn't find any bill information for account {identifier}.\n"
-                    f"Please verify your account number or contact customer support."
-                )
+            response = (
+                f"Sorry, we couldn't find any bill information for account {identifier}.\n"
+                f"Please verify your account number or contact customer support."
+            )
         
         update_chat_history(session, "bot", response)
         return self._split_message(response)
-
-    def handle_balance_menu(self, choice, session):
-        if choice == '1':
-            session['current_state'] = 'make_payment'
-            return self.make_payment(None, session)
-        elif choice == '2':
-            session['current_state'] = 'payment_history'
-            return self.payment_history(None, session)
-        elif choice == '3':
-            session['current_state'] = 'exit'
-            return self.exit_request(None, session)
-        
-        return self.display_balance(None, session)
 
     def make_payment(self, user_message, session):
-        balance = session.get('balance', 0)
-        response = (
-            f"=== Make Payment ===\n\n"
-            f"Current Balance: Rs. {balance:.2f}\n\n"
-            f"Please enter the amount you would like to pay: "
-        )
-        session['current_state'] = 'payment_confirmation'
-        update_chat_history(session, "bot", response)
-        return self._split_message(response)
-
-    def payment_confirmation(self, user_message, session):
-        try:
-            amount = float(user_message.replace('Rs. ', '').strip())
-            if amount <= 0:
-                raise ValueError("Amount must be positive")
-                
-            payment_id = generate_payment_id()
-            session['payment_id'] = payment_id
-            
-            response = (
-                f"=== Payment Confirmation ===\n\n"
-                f"Payment Amount: Rs. {amount:.2f}\n"
-                f"Payment ID: {payment_id}\n"
-                f"Status: Processing\n\n"
-                f"Your payment is being processed. Please allow 24-48 hours for it to be reflected in your account.\n"
-                f"Save your Payment ID for your records.\n\n"
-                f"Thank you for your payment. Is there anything else we can help you with?"
-            )
-            session['current_state'] = 'exit'
-            
-        except ValueError:
-            response = (
-                f"Invalid amount. Please enter a valid number.\n"
-                f"Example: 50.00"
-            )
-            session['current_state'] = 'make_payment'
-            
-        update_chat_history(session, "bot", response)
-        return self._split_message(response)
-
-    def payment_history(self, user_message, session):
         identifier = session.get('identifier')
-        history = self.fetch_payment_history(identifier)
+        contact_number = session.get('contact_number')
+        payment_url = f"https://lecoapp.leco.lk:9442/BillPay/account={identifier}&contact={contact_number}"
+        response = f"Please proceed to the following link to make your payment: <a href='{payment_url}' target='_blank'>{payment_url}</a>"
         
-        if history:
-            response = (
-                f"=== Payment History ===\n\n"
-                f"Account Number: {identifier}\n\n"
-                f"Recent Transactions:\n"
-            )
-            
-            for payment in history:
-                response += (
-                    f"Date: {payment['date']}\n"
-                    f"Amount: Rs.{payment['amount']:.2f}\n"
-                    f"Status: {payment['status']}\n"
-                    f"Payment ID: {payment['payment_id']}\n\n"
-                )
-                
-            response += "Would you like to make a payment?"
-            response += """
-                <div>
-                    <p>Please select an option:</p>
-                    <button class="language-button" onclick="sendMessage('1', this)">Yes</button>
-                    
-                    <button class="language-button" onclick="sendMessage('3', this)">Exit</button>
-                </div>
-                """
-        else:
-            response = (
-                f"No payment history found for account {identifier}.\n\n"
-                f"Would you like to make a payment? (Enter '1' for Yes or '3' to Exit)"
-            )
-            
-        session['current_state'] = 'display_balance'
         update_chat_history(session, "bot", response)
         return self._split_message(response)
-
-    def fetch_payment_history(self, identifier):
-        # Mock payment history data
-        mock_history = {
-            '1234567890': [
-                {
-                    'date': '2024-12-20',
-                    'amount': 100.00,
-                    'status': 'Completed',
-                    'payment_id': 'PAY20241220001'
-                },
-                {
-                    'date': '2024-11-15',
-                    'amount': 150.00,
-                    'status': 'Completed',
-                    'payment_id': 'PAY20241115001'
-                }
-            ]
-        }
-        return mock_history.get(identifier, [])
 
     def dispute_reason(self, user_message, session):
-        if 'reason' in session:
+        if user_message in ['1', '2', '3']:
             session['current_state'] = 'agent_transfer'
-            return self.agent_transfer(user_message, session)
-            
-        session['reason'] = user_message
-        response = (
-            "Please briefly describe the reason for your dispute:\n"
-            "(For example: incorrect charges, unauthorized transaction, etc.)"
-        )
+            response = (
+                "Thank you for providing the reason.\n\n"
+                "We are transferring you to our customer service agent who will assist you with your dispute.\n"
+                "Please wait while we connect you."
+            )
+        else:
+            response = (
+                "Please select a valid reason for your dispute:\n"
+                "1. Incorrect Charges\n"
+                "2. Overcharge\n"
+                "3. Other"
+            )
+        
         update_chat_history(session, "bot", response)
         return self._split_message(response)
 
     def agent_transfer(self, user_message, session):
-        case_number = generate_case_number()
-        session['case_number'] = case_number
         response = (
-            f"=== Bill Dispute Case Created ===\n\n"
-            f"Account Number: {session.get('identifier')}\n"
-            f"Case Number: #{case_number}\n"
-            f"Status: Pending Agent Review\n\n"
-            f"We have logged your dispute. A customer service agent will contact you within 24 hours.\n"
-            f"Please keep your case number for reference.\n\n"
-            f"Is there anything else we can help you with?"
+            "Our customer service agent will be with you shortly.\n"
+            "Your session ID is: " + str(random.randint(10000, 99999)) + "\n"
+            "Please keep this ID handy for reference."
         )
         session['current_state'] = 'exit'
         update_chat_history(session, "bot", response)
         return self._split_message(response)
 
     def exit_request(self, user_message, session):
-        response = (
-            "Thank you for using our Bill Management System.\n"
-            "If you need further assistance, please don't hesitate to contact us.\n"
-            "Have a great day!"
-        )
-        update_chat_history(session, "bot", response)
-        session.clear()
-        return self._split_message(response)
-
-    def reset_bill_inquiries(self, session):
-        session['current_state'] = 'service_selection'
-        session['chat_history'] = []
-        response = (
-            "Welcome to the Bill Management System!\n\n"
-            "Please select a service by entering the corresponding number:\n"
-            "1. Check Bill Balance\n"
-            "2. Report Bill Dispute"
-        )
+        response = "Thank you for using our service. Have a great day!"
         update_chat_history(session, "bot", response)
         return self._split_message(response)
 
-    def _find_node(self, current_node, state_name):
-        if current_node.name == state_name:
-            return current_node
-        for child in current_node.children.values():
-            node = self._find_node(child, state_name)
-            if node:
-                return node
-        return None
-
-    def _split_message(self, message, max_length=160):
-        if len(message) <= max_length:
-            return message
-        return [message[i:i+max_length] for i in range(0, len(message), max_length)]
+    def _split_message(self, message):
+        return message.split("\n\n")
 
 def extract_account_number(message):
-    account_number_pattern = r'\b\d{10}\b'
-    match = re.search(account_number_pattern, message)
-    return match.group(0) if match else None
+    match = re.search(r'\b\d{10}\b', message)
+    return match.group() if match else None
 
 def extract_mobile_number(message):
-    mobile_pattern = r'\b\d{10}\b'  # Assuming 10-digit mobile numbers
-    match = re.search(mobile_pattern, message)
-    return match.group(0) if match else None
+    # Remove any spaces or special characters
+    cleaned_message = re.sub(r'[^0-9]', '', message)
+    # Look for a 10-digit number
+    match = re.search(r'\b\d{10}\b', cleaned_message)
+    return match.group() if match else None
 
-def generate_case_number():
-    return f"DISP{datetime.now().strftime('%Y%m%d%H%M%S')}"
-
-def generate_payment_id():
-    return f"PAY{datetime.now().strftime('%Y%m%d%H%M%S')}"
-
+def extract_payment_amount(message):
+    match = re.search(r'\d+(\.\d{2})?', message)
+    return float(match.group()) if match else None
