@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Chatbot</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    <style>
+      body {
+        font-size: 11px; /* Set small font size for the entire document */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-header">
+        <div class="chat-header-avatar">
+          <!-- Replace the icon with your logo -->
+          <img
+            src="{% static 'images/logo.png' %}"
+            class="avatar-img" 
+          />
+        </div>
+
+        <div class="chat-header-info">
+          <h1>LECO CHAT BOT</h1>
+          <p>Lanka Electricity Company (Private) Limited</p>
+        </div>
+      </div>
+      <div class="chat-box" id="chat-box"></div>
+      <div class="input-container">
+        <input
+          type="text"
+          id="message-input"
+          class="input-box"
+          placeholder="Type your message..."
+        />
+        <button class="send-button" onclick="sendMessage()">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const chatBox = document.getElementById("chat-box");
+      const messageInput = document.getElementById("message-input");
+
+      function sendMessage(message = null, button = null) {
+        const userMessage = message || messageInput.value.trim();
+        if (userMessage === "") return;
+
+        // Display user message
+        const userMessageDiv = document.createElement("div");
+        userMessageDiv.classList.add("message", "user");
+        userMessageDiv.textContent = userMessage;
+        chatBox.appendChild(userMessageDiv);
+
+        // Clear input field
+        if (!message) {
+          messageInput.value = "";
+        }
+
+        // Scroll to the bottom
+        chatBox.scrollTop = chatBox.scrollHeight;
+
+        // Send message to Django backend
+        fetch("http://127.0.0.1:8000/api/chat/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: `message=${encodeURIComponent(userMessage)}`,
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            // Display bot's response
+            const botMessageDiv = document.createElement("div");
+            botMessageDiv.classList.add("message", "bot");
+            botMessageDiv.innerHTML = data.response;
+            chatBox.appendChild(botMessageDiv);
+
+            // Highlight the selected button, disable it, and remove clickable option
+            if (button) {
+              button.classList.add('selected');
+              button.disabled = true;
+              button.style.pointerEvents = 'none';
+            }
+
+            // Scroll to the bottom
+            chatBox.scrollTop = chatBox.scrollHeight;
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
+
+      // Allow pressing Enter to send a message
+      messageInput.addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+          sendMessage();
+        }
+      });
+    </script>
+  </body>
+</html>
