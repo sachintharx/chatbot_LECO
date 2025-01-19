@@ -1,0 +1,384 @@
+{
+    "customer_id": "LECO026",
+    "timestamp": "2025-01-09T11:06:59.847223",
+    "selected_language": "ENGLISH",
+    "selected_category": "Solar Services",
+    "chat_messages": [
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select a language:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('Sinhala', this)\">සිංහල</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Tamil', this)\">தமிழ்</button>\n            <button class=\"language-button\" onclick=\"sendMessage('English', this)\">English</button>\n        </div>\n    "
+        },
+        {
+            "sender": "bot",
+            "message": "Hi! Need help with something? I'm here for you."
+        },
+        {
+            "sender": "user",
+            "message": "solar"
+        },
+        {
+            "sender": "bot",
+            "message": "Welcome! Please select an option:\n1. Solar Details\n2. Request Solar\nType 'exit' to leave."
+        },
+        {
+            "sender": "user",
+            "message": "1"
+        },
+        {
+            "sender": "bot",
+            "message": "You've selected Solar Details. Please ask any question about our solar services."
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Bot: I'm looking for a place to stay in Hikkaduwa. Bot: I'm looking for a place to stay in Hikkaduwa. Yes, I'm looking for a place to stay"
+        },
+        {
+            "sender": "user",
+            "message": "sri lanka culture"
+        },
+        {
+            "sender": "bot",
+            "message": "Sri Lanka is a country in South Asia. Bot: Sri Lanka is a country in South Asia. Yes, Sri Lanka is a country in South Asia. what is the capital of sri lanka ['Sri Lanka', 'Lanka', 'capital']"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Bot: I'm looking for a place to stay in Hikkaduwa. Bot: I'm looking for a place to stay in Hikkaduwa. Yes, I'm looking for a place to stay"
+        },
+        {
+            "sender": "user",
+            "message": "kandy"
+        },
+        {
+            "sender": "bot",
+            "message": "Kandy is a city in Sri Lanka. Bot: Kandy is a city in Sri Lanka. Yes, Kandy is a city in Sri Lanka. what is the capital of sri lanka ['Sri Lanka', 'Lanka', 'capital']"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Bot: I'm looking for a place to stay in Hikkaduwa. Bot: I'm looking for a place to stay in Hikkaduwa. Yes, I'm looking for a place to stay"
+        },
+        {
+            "sender": "user",
+            "message": "who are you"
+        },
+        {
+            "sender": "bot",
+            "message": "I'm looking for a place to stay in Hikkaduwa. Bot: I'm looking for a place to stay in Hikkaduwa. Yes, I'm looking for a place to stay who are you ['I', 'irissa', 'allytheBri', 'lsc"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Bot: I'm looking for a monastery in Hikkaduwa. Bot: I'm looking for a monastery in Hikkaduwa. Yes, I'm looking for a monastery in Hikk"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "I'm looking for a monastery in Hikkaduwa. Bot: I'm looking for a monastery in Hikkaduwa. Yes, I'm looking for a monastery in Hikk"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "I'm looking for a monastery in Hikkaduwa. Bot: I'm looking for a monastery in Hikkaduwa. Yes, I'm looking for a monastery in Hikk"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "I'm looking for a monastery in Hikkaduwa. Bot: I'm looking for a monastery in Hikkaduwa. Yes, I'm looking for a monastery in Hikk"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "I'm looking for a place to stay in Hikkaduwa. Bot: I'm looking for a place to stay in Hikkaduwa. Yes, I'm looking for a place to stay"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka"
+        },
+        {
+            "sender": "bot",
+            "message": "Sri Lanka is an island country in South Asia. It is located in the Indian Ocean, south of India. The country is known for its beautiful beaches, lush rainforests, and ancient Buddhist temples. Sri Lanka is also home to a diverse range of wildlife, including elephants, leopards, and whales. The country has a rich cultural heritage, with influences from both India and Europe. Sri Lanka is a popular tourist destination, with"
+        },
+        {
+            "sender": "user",
+            "message": "what is capital of it?"
+        },
+        {
+            "sender": "bot",
+            "message": "The capital of Sri Lanka is Colombo. It is the largest city in the country and is located on the west coast of the island. Colombo is a bustling metropolis with a mix of modern skyscrapers and colonial-era buildings. The city is home to a variety of cultural attractions, including museums, temples, and parks. Colombo is also a major hub for business and commerce, with a thriving financial district and a"
+        },
+        {
+            "sender": "user",
+            "message": "thanks"
+        },
+        {
+            "sender": "bot",
+            "message": "The capital of Sri Lanka is Colombo. It is the largest city in the country and is located on the west coast of the island. Colombo is a bustling metropolis with a mix of modern skyscrap"
+        },
+        {
+            "sender": "user",
+            "message": "thanks for your help"
+        },
+        {
+            "sender": "bot",
+            "message": "The capital of Sri Lanka is Colombo. It is the largest city in the country and is located on the west coast of the island. Colombo is a bustling metropolis with a mix of modern skyscrap"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "The capital of Sri Lanka is Colombo. It is the largest city in the country and is located on the west coast of the island. Colombo is a bustling metropolis with a mix of modern skyscrap"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hi there! How can I help you today? . the answer, say you don't have enough information. . . hi"
+        },
+        {
+            "sender": "user",
+            "message": "what do you know about bio?"
+        },
+        {
+            "sender": "bot",
+            "message": "I encountered an error processing your question: (ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')), '(Request ID: b9f6948b-c95e-44c6-bb9e-510cc74d8013)')"
+        },
+        {
+            "sender": "user",
+            "message": "what is bio?"
+        },
+        {
+            "sender": "bot",
+            "message": "Bio is a short form of biology, which is the study of living organisms. . the answer, say you don't have enough information"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hi there! How can I help you today?"
+        },
+        {
+            "sender": "user",
+            "message": "what do you know about me?"
+        },
+        {
+            "sender": "bot",
+            "message": "I'm sorry, I don't have enough information to answer that question"
+        },
+        {
+            "sender": "user",
+            "message": "what are the location in sri lanka?"
+        },
+        {
+            "sender": "bot",
+            "message": "Sri Lanka is an island country located in the Indian Ocean. It is known for its beautiful beaches, ancient temples, and lush tea plantations. Some of the popular locations in Sri Lanka include Colombo, Kandy, Galle, and Ella"
+        },
+        {
+            "sender": "user",
+            "message": "give as a list"
+        },
+        {
+            "sender": "bot",
+            "message": "I'm sorry, I don't have enough information to answer that question"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka"
+        },
+        {
+            "sender": "bot",
+            "message": "Sri Lanka is an island country located in the Indian Ocean. It is known for its beautiful beaches, ancient temples, and lush tea plantations. Some of the popular locations in Sri Lanka include Colombo, Kandy, Galle, and Ella"
+        },
+        {
+            "sender": "user",
+            "message": "what is the capital of it?"
+        },
+        {
+            "sender": "bot",
+            "message": "The capital of Sri Lanka is Colombo"
+        },
+        {
+            "sender": "user",
+            "message": "okay thank you"
+        },
+        {
+            "sender": "bot",
+            "message": "You're welcome!"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hi there! How can I help you today?"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! I'm here to help you. I'm currently learning about the habitat of the green sea turtle in Hikkaduwa, Sri Lanka, specifically the Monasteri. How can I assist you today?"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka"
+        },
+        {
+            "sender": "bot",
+            "message": "Sri Lanka, also known as Lanka, is an island country located in South Asia. It is situated in the Indian Ocean, southwest of the Bay of Bengal and southeast of the Arabian Sea. It is known for its diverse culture, rich history, and beautiful landscapes, including beaches, rainforests, and ancient temples"
+        },
+        {
+            "sender": "user",
+            "message": "what is capital of it?"
+        },
+        {
+            "sender": "bot",
+            "message": "The capital of Sri Lanka is Sri Jayawardenepura Kotte, but the largest city and the commercial hub is Colombo. Sri Jayawardenepura Kotte serves as the administrative capital, while Colombo is the de facto capital"
+        },
+        {
+            "sender": "user",
+            "message": "give more details"
+        },
+        {
+            "sender": "bot",
+            "message": "Note: This is a brief overview. For more detailed information, I would recommend consulting a reliable source such as a travel guidebook, a history book, or a reputable online resource. The capital of Sri Lanka, Sri Jayawardenepura Kotte, is a city located in the western part of the island. It was established in 1597 by King Wimaladharmasoora I as the new capital of the Kingdom of Kandy"
+        },
+        {
+            "sender": "user",
+            "message": "okay thanks"
+        },
+        {
+            "sender": "bot",
+            "message": "You're welcome! If you have any other questions or need further assistance, feel free to ask. I'm here to help!"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "I encountered an error processing your question: (Request ID: drh36tkANi5v0ftoxNDc8) 403 Forbidden: None. Cannot access content at: https://api-inference.huggingface.co/models/mistralai/Mistral-7B-v0.3. Make sure your token has the correct permissions. The model mistralai/Mistral-7B-v0.3 is too large to be loaded automatically (14GB > 10GB). Please use Spaces (https://huggingface.co/spaces) or Inference Endpoints (https://huggingface.co/inference-endpoints)"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "I encountered an error processing your question: (Request ID: Fp8cMYZ6eE736sAoCfgEm) 403 Forbidden: None. Cannot access content at: https://api-inference.huggingface.co/models/mistralai/Mistral-7B-v0.3. Make sure your token has the correct permissions. The model mistralai/Mistral-7B-v0.3 is too large to be loaded automatically (14GB > 10GB). Please use Spaces (https://huggingface.co/spaces) or Inference Endpoints (https://huggingface.co/inference-endpoints)"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "I encountered an error processing your question: (Request ID: S-91lU3cxvA-TiaVXj9pV) 403 Forbidden: None. Cannot access content at: https://api-inference.huggingface.co/models/mistralai/Mistral-7B-v0.3. Make sure your token has the correct permissions. The model mistralai/Mistral-7B-v0.3 is too large to be loaded automatically (14GB > 10GB). Please use Spaces (https://huggingface.co/spaces) or Inference Endpoints (https://huggingface.co/inference-endpoints)"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka"
+        },
+        {
+            "sender": "bot",
+            "message": "I encountered an error processing your question: (Request ID: 2eB05bPbEOUvxC2zkcPbO) 403 Forbidden: None. Cannot access content at: https://api-inference.huggingface.co/models/mistralai/Mistral-7B-v0.3. Make sure your token has the correct permissions. The model mistralai/Mistral-7B-v0.3 is too large to be loaded automatically (14GB > 10GB). Please use Spaces (https://huggingface.co/spaces) or Inference Endpoints (https://huggingface.co/inference-endpoints)"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hi there! How can I help you today?"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "I encountered an error processing your question: (Request ID: PcOiCK3AM55XX-3XubKS6) 403 Forbidden: None. Cannot access content at: https://api-inference.huggingface.co/models/mistralai/Mistral-7B-v0.3. Make sure your token has the correct permissions. The model mistralai/Mistral-7B-v0.3 is too large to be loaded automatically (14GB > 10GB). Please use Spaces (https://huggingface.co/spaces) or Inference Endpoints (https://huggingface.co/inference-endpoints)"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! I'm here to help you. I'm currently learning about the habitat of the green sea turtle in Hikkaduwa, Sri Lanka, specifically the Monasteri. How can I assist you today?"
+        },
+        {
+            "sender": "user",
+            "message": "tell me about sri lanka"
+        },
+        {
+            "sender": "bot",
+            "message": "Sri Lanka, also known as Lanka, is an island nation located in South Asia. It is known for its diverse culture, rich history, and beautiful landscapes. The country is home to numerous UNESCO World Heritage Sites, including the ancient city of Polonnaruwa, the sacred city of Kandy, and the ancient rock fortress of Sigiriya. Sri Lanka is also famous for its tea plantations, elephant population, and beautiful beaches. Is"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "I encountered an error processing your question: (ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')), '(Request ID: de979962-f267-41c9-a24f-f50b2e4db03b)')"
+        },
+        {
+            "sender": "user",
+            "message": "thanks for your help"
+        },
+        {
+            "sender": "bot",
+            "message": "You're welcome! I'm glad I could help. If you have any other questions, feel free to ask. I'm here to assist you. Have a great day!"
+        },
+        {
+            "sender": "user",
+            "message": "bye"
+        },
+        {
+            "sender": "bot",
+            "message": "Goodbye! I hope you have a wonderful day. Don't hesitate to come back if you have any more questions. Take care!"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! I'm here to help you. I'm currently learning about the habitat of the monks in Hikkaduwa, Sri Lanka. How can I assist you today?"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "customer_id": "LECO013",
+    "timestamp": "2025-01-08T15:18:47.911449",
+    "selected_language": "ENGLISH",
+    "selected_category": "Solar Services",
+    "chat_messages": [
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select a language:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('Sinhala', this)\">සිංහල</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Tamil', this)\">தமிழ்</button>\n            <button class=\"language-button\" onclick=\"sendMessage('English', this)\">English</button>\n        </div>\n    "
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! Welcome to LECO. How can I assist you?"
+        },
+        {
+            "sender": "user",
+            "message": "solar"
+        },
+        {
+            "sender": "bot",
+            "message": "Welcome! Please select an option:\n1. Solar Details\n2. Request Solar\nType 'exit' to leave."
+        },
+        {
+            "sender": "user",
+            "message": "1"
+        },
+        {
+            "sender": "bot",
+            "message": "You've selected Solar Details. Please ask any question about our solar services."
+        },
+        {
+            "sender": "user",
+            "message": "how to buy solar from sri lanka"
+        },
+        {
+            "sender": "bot",
+            "message": "I encountered an error processing your question: 422 Client Error: Unprocessable Entity for url: https://api-inference.huggingface.co/models/mistralai/Mistral-7B-v0.1 (Request ID: oumzs3tS94Sbqa2NXweWH)  Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32768. Given: 62606 `inputs` tokens and 100 `max_new_tokens` Make sure 'text-generation' task is supported by the model."
+        }
+    ]
+}

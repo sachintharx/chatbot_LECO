@@ -1,0 +1,56 @@
+{
+    "customer_id": "LECO022",
+    "timestamp": "2025-01-08T19:54:15.511297",
+    "selected_language": "ENGLISH",
+    "selected_category": "Solar Services",
+    "chat_messages": [
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select a language:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('Sinhala', this)\">සිංහල</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Tamil', this)\">தமிழ்</button>\n            <button class=\"language-button\" onclick=\"sendMessage('English', this)\">English</button>\n        </div>\n    "
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! How can LECO assist you today?"
+        },
+        {
+            "sender": "user",
+            "message": "solar"
+        },
+        {
+            "sender": "bot",
+            "message": "Welcome! Please select an option:\n1. Solar Details\n2. Request Solar\nType 'exit' to leave."
+        },
+        {
+            "sender": "user",
+            "message": "1"
+        },
+        {
+            "sender": "bot",
+            "message": "You've selected Solar Details. Please ask any question about our solar services."
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hi! How can I help you?"
+        },
+        {
+            "sender": "user",
+            "message": "tell me what you know"
+        },
+        {
+            "sender": "bot",
+            "message": "I am a helpful assistant . the answer, say you don't have enough information. . . hi Assistant: . If the context"
+        },
+        {
+            "sender": "user",
+            "message": "what do you know about sri lanka?"
+        },
+        {
+            "sender": "bot",
+            "message": "Sri Lanka is an island nation located in the Indian Ocean, south of India. It is known for its beautiful beaches, ancient temples, and tea plantations. The country has a rich history and culture, with influences from both India and Europe. hi Assistant: . If the context"
+        }
+    ]
+}

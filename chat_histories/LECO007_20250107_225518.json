@@ -1,0 +1,48 @@
+{
+    "customer_id": "LECO007",
+    "timestamp": "2025-01-07T22:55:18.538308",
+    "selected_language": "ENGLISH",
+    "selected_category": "New Connection Requests",
+    "chat_messages": [
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select a language:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('Sinhala', this)\">සිංහල</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Tamil', this)\">தமிழ்</button>\n            <button class=\"language-button\" onclick=\"sendMessage('English', this)\">English</button>\n        </div>\n    "
+        },
+        {
+            "sender": "bot",
+            "message": "Hi! Need help with something? I'm here for you."
+        },
+        {
+            "sender": "user",
+            "message": "efef"
+        },
+        {
+            "sender": "bot",
+            "message": "Sorry, I couldn't understand that."
+        },
+        {
+            "sender": "user",
+            "message": "fewef"
+        },
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select an option:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('New Connection Requests', this)\">New Connection Requests</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Bill Inquiries', this)\">Bill Inquiries</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Change Language', this)\">Change Language</button>\n        </div>\n    "
+        },
+        {
+            "sender": "user",
+            "message": "New Connection Requests"
+        },
+        {
+            "sender": "bot",
+            "message": "Please enter your district to request a new connection."
+        },
+        {
+            "sender": "user",
+            "message": "kandy"
+        },
+        {
+            "sender": "bot",
+            "message": "Thank you for providing your district: Kandy. Can you also share the nearest town?"
+        }
+    ]
+}

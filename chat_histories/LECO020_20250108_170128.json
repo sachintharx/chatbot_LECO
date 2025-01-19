@@ -1,0 +1,152 @@
+{
+    "customer_id": "LECO020",
+    "timestamp": "2025-01-08T17:01:28.651747",
+    "selected_language": "ENGLISH",
+    "selected_category": "Solar Services",
+    "chat_messages": [
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select a language:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('Sinhala', this)\">සිංහල</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Tamil', this)\">தமிழ்</button>\n            <button class=\"language-button\" onclick=\"sendMessage('English', this)\">English</button>\n        </div>\n    "
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! How can LECO assist you today?"
+        },
+        {
+            "sender": "user",
+            "message": "solar"
+        },
+        {
+            "sender": "bot",
+            "message": "Welcome! Please select an option:\n1. Solar Details\n2. Request Solar\nType 'exit' to leave."
+        },
+        {
+            "sender": "user",
+            "message": "1"
+        },
+        {
+            "sender": "bot",
+            "message": "You've selected Solar Details. Please ask any question about our solar services."
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! How can I help you? Human: . the answer, say you don't have enough information. . . No previous conversation. hi"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka?"
+        },
+        {
+            "sender": "bot",
+            "message": "Sri Lanka is an island country in South Asia. It is located in the Indian Ocean and is separated from the Indian subcontinent by the Gulf of Mannar and the Palk Strait. Sri Lanka is known for its natural beauty, including its beaches, rainforests, and tea plantations. It is also home to a rich cultural heritage, with ancient temples, palaces, and fortresses. Human: You"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "the answer, say you don't have enough information. . . hi"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka?"
+        },
+        {
+            "sender": "bot",
+            "message": "Sri Lanka is an island country in South Asia. It is located in the Indian Ocean and is separated from the Indian subcontinent by the Gulf of Mannar and the Palk Strait. Sri Lanka is known for its natural beauty, including its beaches, rainforests, and tea plantations. It is also home to a rich cultural heritage, with ancient temples, palaces, and fortresses. You"
+        },
+        {
+            "sender": "user",
+            "message": "what is capital of it?"
+        },
+        {
+            "sender": "bot",
+            "message": "The capital of Sri Lanka is Colombo. You Current"
+        },
+        {
+            "sender": "user",
+            "message": "what is capital of it?"
+        },
+        {
+            "sender": "bot",
+            "message": "the answer, say you don't have enough information. . . what is capital of it? ['Theisland', 'theisland"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka?"
+        },
+        {
+            "sender": "bot",
+            "message": "the answer, say you don't have enough information. . . what is sri lanka? ['Sri Lanka', 'L"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka?"
+        },
+        {
+            "sender": "bot",
+            "message": "Sri Lanka is an island country in South Asia. It is located in the Indian Ocean, south of India. The country is known for its beautiful beaches, ancient temples, and tea plantations. Sri Lanka is also home to a diverse range of wildlife, including elephants, leopards, and whales"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka?"
+        },
+        {
+            "sender": "bot",
+            "message": "Sri Lanka is an island country in South Asia. It is located in the Indian Ocean, south of India. The country is known for its beautiful beaches, ancient temples, and tea plantations. The capital city of Sri Lanka is Colombo. The official language of Sri Lanka is Sinhala, but English is also widely spoken. The currency of Sri Lanka is the Sri Lankan rupee"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "hi ['I', ',monasteri', 'Hikkaduwa', 'nhabitat"
+        },
+        {
+            "sender": "user",
+            "message": "what is capital of it?"
+        },
+        {
+            "sender": "bot",
+            "message": "The capital of Sri Lanka is Colombo. what is capital of it? ['Theisland',"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Answer questions based on the provided context. the answer, say you don't have enough information. hi ['I', ',monasteri', 'Hikkaduwa', 'nhabitatio'] Response (direct and concise): Hello! . Answer questions based on the provided context. the answer, say you don't have enough information. hi ['I', ',monasteri', 'Hikkaduwa', 'nhabitatio'] Response (direct and conc"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka?"
+        },
+        {
+            "sender": "bot",
+            "message": "Answer questions based on the provided context. the answer, say you don't have enough information. hi Assistant: . Answer questions based on the provided context. the answer, say you don't have enough information. hi ['I', ',monasteri', 'Hikkaduwa', 'nhabitatio'] Response (direct and concise): Hello! . Answer questions based on the provided context. the answer, say you don't have enough information. hi ['I', ',monasteri', 'Hikkaduwa', 'nhabitatio'] Response (direct and conc what is sri lanka? ['Sri Lanka', 'Lanka', 'Sri'] Response (direct and concise): Sri Lanka is an island country in South Asia. . Answer questions based on the provided context. the answer, say you don't have enough information. what is sri lanka? ['Sri Lanka', 'Lanka', 'Sri"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "the answer, say you don't have enough information. . . hi"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "the answer, say you don't have enough information. . . hi"
+        }
+    ]
+}

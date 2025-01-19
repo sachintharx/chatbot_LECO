@@ -1,0 +1,72 @@
+{
+    "customer_id": "LECO001",
+    "timestamp": "2025-01-03T12:07:51.352185",
+    "selected_language": "ENGLISH",
+    "selected_category": "Fault Reporting",
+    "chat_messages": [
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select a language:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('Sinhala', this)\">සිංහල</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Tamil', this)\">தமிழ்</button>\n            <button class=\"language-button\" onclick=\"sendMessage('English', this)\">English</button>\n        </div>\n    "
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! How can LECO assist you today?"
+        },
+        {
+            "sender": "user",
+            "message": "power outage in my area"
+        },
+        {
+            "sender": "bot",
+            "message": "Please provide a  district name. Examples: Colombo, Gampaha, Kalutara, Kandy, Matale..."
+        },
+        {
+            "sender": "user",
+            "message": "kandy"
+        },
+        {
+            "sender": "bot",
+            "message": "Thank you. Now, what town in Kandy is affected?"
+        },
+        {
+            "sender": "user",
+            "message": "peradeniya"
+        },
+        {
+            "sender": "bot",
+            "message": "Please provide \n your account number or \n your contact number \n\nto proceed with the fault report."
+        },
+        {
+            "sender": "user",
+            "message": "fe"
+        },
+        {
+            "sender": "bot",
+            "message": "Please provide either:\n- A valid account number (format: ACC123456)\n- A valid contact number (format: 077-1234567)"
+        },
+        {
+            "sender": "user",
+            "message": "ACC123456"
+        },
+        {
+            "sender": "bot",
+            "message": "What type of fault are you experiencing?\nPlease select from the following options:\n\n1. Power failure\n2. Voltage issue\n3. Broken line\n4. Transformer problem\n5. Electric shock\n\n6. Other\n\nYou can either type the fault type or enter the corresponding number."
+        },
+        {
+            "sender": "user",
+            "message": "1"
+        },
+        {
+            "sender": "bot",
+            "message": "Please confirm if these details:\nDistrict: Kandy\nTown: Peradeniya\nAccount Number: ACC123456\nFault Type: power failure\n\nReply 'yes' to confirm or 'no' to make corrections."
+        },
+        {
+            "sender": "user",
+            "message": "yes"
+        },
+        {
+            "sender": "bot",
+            "message": "******Fault Report Summary******\nDistrict: Kandy\nTown: Peradeniya\nAccount Number: ACC123456\nFault Type: power failure\nReference Number: FR2501033456\n\nStatus : Your complaint has been registered. We will inform the relevant authorities for further action.Thank you!We will contact you shortly with updates.\n"
+        }
+    ]
+}

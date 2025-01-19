@@ -1,0 +1,128 @@
+{
+    "customer_id": "LECO016",
+    "timestamp": "2025-01-08T16:16:54.666406",
+    "selected_language": "ENGLISH",
+    "selected_category": "Solar Services",
+    "chat_messages": [
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select a language:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('Sinhala', this)\">සිංහල</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Tamil', this)\">தமிழ்</button>\n            <button class=\"language-button\" onclick=\"sendMessage('English', this)\">English</button>\n        </div>\n    "
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! How can LECO assist you today?"
+        },
+        {
+            "sender": "user",
+            "message": "solar"
+        },
+        {
+            "sender": "bot",
+            "message": "Welcome! Please select an option:\n1. Solar Details\n2. Request Solar\nType 'exit' to leave."
+        },
+        {
+            "sender": "user",
+            "message": "1"
+        },
+        {
+            "sender": "bot",
+            "message": "You've selected Solar Details. Please ask any question about our solar services."
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "I'm sorry, I couldn't understand that."
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka"
+        },
+        {
+            "sender": "bot",
+            "message": "I'm sorry, I couldn't understand that."
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "I'm sorry, I couldn't understand that."
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Error: 404, Unable to get response from the chatbot."
+        },
+        {
+            "sender": "user",
+            "message": "de"
+        },
+        {
+            "sender": "bot",
+            "message": "Error: 404, Unable to get response from the chatbot."
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "You: Hello! How can I help you?                           You are a helpful assistant that answers questions based on the provided context.         If the context doesn't contain the answer, say you don't have enough information.         Always maintain a friendly and professional tone. Also, reply to the greetings.                  Previous conversation:         No previous conversation.                  Current question: hi"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka?"
+        },
+        {
+            "sender": "bot",
+            "message": "You: Sri Lanka is an island country in South Asia. It is located in the Indian Ocean and is separated from the Indian subcontinent by the Gulf of Mannar and the Palk Strait. Sri Lanka is known for its natural beauty, including its beaches, rainforests, and tea plantations. It is also home to a rich cultural heritage, with ancient temples, palaces, and fortresses.                           You"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "You: Hello! How can I help you?                           You are a helpful assistant that answers questions based on the provided context.         If the context doesn't contain the answer, say you don't have enough information.         Always maintain a friendly and professional tone. Also, reply to the greetings.                  Previous conversation:         No previous conversation.                  Current question: hi"
+        },
+        {
+            "sender": "user",
+            "message": "what is sri lanka"
+        },
+        {
+            "sender": "bot",
+            "message": "You: Sri Lanka is an island country in South Asia. It is located in the Indian Ocean and is separated from the Indian subcontinent by the Gulf of Mannar and the Palk Strait. Sri Lanka is known for its natural beauty, including its beaches, rainforests, and tea plantations. It is also home to a rich cultural heritage, with ancient temples, palaces, and fortresses.                           You"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "You: Hello! How can I help you?                           You are a helpful assistant that answers questions based on the provided context.         If the context doesn't contain the answer, say you don't have enough information.         Always maintain a friendly and professional tone. Also, reply to the greetings.                  Previous conversation:         No previous conversation.                  Current question: hi"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "You: Hello! How can I help you?                            that answers questions based on the provided context.         If the context doesn't contain the answer, say you don't have enough information.         Always maintain a friendly and professional tone. Also, reply to the greetings.                           No previous conversation.                   hi"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "You: Hello! How can I help you?                           You are a helpful assistant that answers questions based on the provided context.         If the context doesn't contain the answer, say you don't have enough information.         Always maintain a friendly and professional tone. Also, reply to the greetings.                  Previous conversation:         No previous conversation.                  Current question: hi"
+        }
+    ]
+}

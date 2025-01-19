@@ -1,0 +1,24 @@
+{
+    "customer_id": "LECO010",
+    "timestamp": "2025-01-08T14:58:07.869555",
+    "selected_language": "ENGLISH",
+    "selected_category": "Solar Services",
+    "chat_messages": [
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select a language:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('Sinhala', this)\">සිංහල</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Tamil', this)\">தமிழ்</button>\n            <button class=\"language-button\" onclick=\"sendMessage('English', this)\">English</button>\n        </div>\n    "
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! Welcome to LECO. How can I assist you?"
+        },
+        {
+            "sender": "user",
+            "message": "solar"
+        },
+        {
+            "sender": "bot",
+            "message": "Solar is a form of energy that comes from the sun. It is a renewable energy source that is clean and sustainable. Solar energy can be used to generate electricity, heat water, and power vehicles. Solar energy is becoming increasingly popular as a way to reduce our reliance on fossil fuels and help protect the environment.                  Current question: Our team will contact you shortly."
+        }
+    ]
+}

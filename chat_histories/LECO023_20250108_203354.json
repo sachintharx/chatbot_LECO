@@ -1,0 +1,104 @@
+{
+    "customer_id": "LECO023",
+    "timestamp": "2025-01-08T20:33:54.007665",
+    "selected_language": "ENGLISH",
+    "selected_category": "Solar Services",
+    "chat_messages": [
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select a language:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('Sinhala', this)\">සිංහල</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Tamil', this)\">தமிழ்</button>\n            <button class=\"language-button\" onclick=\"sendMessage('English', this)\">English</button>\n        </div>\n    "
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! Welcome to LECO. How can I assist you?"
+        },
+        {
+            "sender": "user",
+            "message": "solar"
+        },
+        {
+            "sender": "bot",
+            "message": "Welcome! Please select an option:\n1. Solar Details\n2. Request Solar\nType 'exit' to leave."
+        },
+        {
+            "sender": "user",
+            "message": "1"
+        },
+        {
+            "sender": "bot",
+            "message": "You've selected Solar Details. Please ask any question about our solar services."
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "I encountered an error processing your question: (ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')), '(Request ID: c3a43056-70f4-40af-8d86-dc09707d7cfe)')"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hi! How can I help you?"
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hi! How can I help you?"
+        },
+        {
+            "sender": "user",
+            "message": "hello"
+        },
+        {
+            "sender": "bot",
+            "message": ""
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Hi! How can I help you?"
+        },
+        {
+            "sender": "user",
+            "message": "hey"
+        },
+        {
+            "sender": "bot",
+            "message": "Hi! How can I help you?"
+        },
+        {
+            "sender": "user",
+            "message": "hello"
+        },
+        {
+            "sender": "bot",
+            "message": ""
+        },
+        {
+            "sender": "user",
+            "message": "hi"
+        },
+        {
+            "sender": "bot",
+            "message": "Bot: I am looking for a monastery in Hikkaduwa. Bot: I am looking for a monastery in Hikkaduwa. Yes, I am looking for a monastery in Hikkaduwa"
+        },
+        {
+            "sender": "user",
+            "message": "hello"
+        },
+        {
+            "sender": "bot",
+            "message": "Bot: I am looking for a monastery in Hikkaduwa. Bot: I am looking for a monastery in Hikkaduwa. Yes, I am looking for a monastery in Hikkaduwa"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "customer_id": "LECO002",
+    "timestamp": "2025-01-03T12:12:28.012858",
+    "selected_language": "ENGLISH",
+    "selected_category": "New Connection Requests",
+    "chat_messages": [
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select a language:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('Sinhala', this)\">සිංහල</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Tamil', this)\">தமிழ்</button>\n            <button class=\"language-button\" onclick=\"sendMessage('English', this)\">English</button>\n        </div>\n    "
+        },
+        {
+            "sender": "bot",
+            "message": "Hello! Welcome to LECO. How can I assist you?"
+        },
+        {
+            "sender": "user",
+            "message": "I want new conection"
+        },
+        {
+            "sender": "bot",
+            "message": "We need your district to proceed with the request."
+        },
+        {
+            "sender": "user",
+            "message": "kandy"
+        },
+        {
+            "sender": "bot",
+            "message": "Thank you for providing your district: Kandy. Please provide the nearest town."
+        },
+        {
+            "sender": "user",
+            "message": "peradeniya"
+        },
+        {
+            "sender": "bot",
+            "message": "Thank you for providing your town: Peradeniya. You will be contacted shortly."
+        }
+    ]
+}

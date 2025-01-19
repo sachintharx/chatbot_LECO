@@ -1,0 +1,40 @@
+{
+    "customer_id": "LECO005",
+    "timestamp": "2025-01-07T22:30:51.685678",
+    "selected_language": "SINHALA",
+    "selected_category": "New Connection Requests",
+    "chat_messages": [
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>Please select a language:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('Sinhala', this)\">සිංහල</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Tamil', this)\">தமிழ்</button>\n            <button class=\"language-button\" onclick=\"sendMessage('English', this)\">English</button>\n        </div>\n    "
+        },
+        {
+            "sender": "bot",
+            "message": "\n        <div>\n            <p>කරුණාකර විධානයක් තෝරන්න:</p>\n            <button class=\"language-button\" onclick=\"sendMessage('New Connection Requests', this)\">නව සම්බන්ධතා ඉල්ලීම්</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Bill Inquiries', this)\">බිල් විමසීම්</button>\n            <button class=\"language-button\" onclick=\"sendMessage('Change Language', this)\">භාෂාව වෙනස් කිරීම</button>\n        </div>\n    "
+        },
+        {
+            "sender": "user",
+            "message": "New Connection Requests"
+        },
+        {
+            "sender": "bot",
+            "message": "ඔබගේ දිස්ත්‍රික්කය ලබාදෙන්න."
+        },
+        {
+            "sender": "user",
+            "message": "kandy"
+        },
+        {
+            "sender": "bot",
+            "message": "අපට ඔබගේ දිස්ත්‍රික්කය අවශ්‍යයි ඉදිරියට යාමට."
+        },
+        {
+            "sender": "user",
+            "message": "kandy"
+        },
+        {
+            "sender": "bot",
+            "message": "ඔබගේ දිස්ත්‍රික්කය ලබාදෙන්න."
+        }
+    ]
+}
