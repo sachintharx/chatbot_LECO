@@ -109,13 +109,13 @@ class Fault_and_Incident_ReportingTree_EN:
             session['current_state'] = 'confirm_details'
             response = self._generate_confirmation(session)
         else:
-            response = ("Please specify the type of electrical fault:\n"
-                       "1. Power failure\n"
-                       "2. Voltage issue\n"
-                       "3. Broken line\n"
-                       "4. Transformer problem\n"
-                       "5. Electric shock\n\n"
-                       "You can either type the fault type or enter the corresponding number.")
+            response = ("Please specify the type of electrical fault:\n")
+                       #"1. Power failure\n"
+                       #"2. Voltage issue\n"
+                       #"3. Broken line\n"
+                       #"4. Transformer problem\n"
+                       #"5. Electric shock\n\n"
+                       #"You can either type the fault type or enter the corresponding number.")
         update_chat_history(session, "bot", response)
         return response
 
