@@ -14,9 +14,11 @@ def rule_based_response(category, user_message=None, session=None, language='eng
         return handle_connection_request(user_message, session)
     
     elif category == 'Bill Inquiries':
+        print(category)
         return handle_bill_inquiries(user_message, session)
     
     elif category == 'Fault Reporting':
+        print(category)
         return handle_fault_and_incident_reporting(user_message, session)
         
     elif category == 'Incident Reports':

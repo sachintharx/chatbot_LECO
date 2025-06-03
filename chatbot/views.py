@@ -213,6 +213,7 @@ categories = [
 
 @csrf_exempt
 def chat(request):
+    print(request)
     if request.method != "POST":
         return JsonResponse({'response': 'Invalid request method.'})
 
@@ -272,43 +273,45 @@ def chat(request):
     # Store user message in chat history
     update_chat_history(session, "user", user_message)
 
+
     # Workflow handling
     current_workflow = session.get('current_workflow')
     if current_workflow:
-        if current_workflow == "Fault Reporting":
-            response = handle_fault_and_incident_reporting(user_message, session)
-            if session.get("workflow_state") == "exit":
-                save_chat_history(
-                    customer_id=customer_id,
-                    language=session.get('selected_language', 'unknown'),
-                    category=current_workflow,
-                    messages=session['chat_history'],
-                )
-                session['current_workflow'] = None
-                session['workflow_state'] = None
-            else:
-                update_chat_history(session, "bot", response)
-                return JsonResponse({'response': response, 'chat_history': session['chat_history']})
+        print(user_message)
+        # if current_workflow == "Fault Reporting":
+        #     response = handle_fault_and_incident_reporting(user_message, session)
+        #     if session.get("workflow_state") == "exit":
+        #         save_chat_history(
+        #             customer_id=customer_id,
+        #             language=session.get('selected_language', 'unknown'),
+        #             category=current_workflow,
+        #             messages=session['chat_history'],
+        #         )
+        #         session['current_workflow'] = None
+        #         session['workflow_state'] = None
+        #     else:
+        #         update_chat_history(session, "bot", response)
+        #         return JsonResponse({'response': response, 'chat_history': session['chat_history']})
+        # else:
+        response = rule_based_response(current_workflow, user_message, session, session.get('selected_language', 'unknown'))
+        if session.get("workflow_state") == "exit":
+            save_chat_history(
+                customer_id=customer_id,
+                language=session.get('selected_language', 'unknown'),
+                category=current_workflow,
+                messages=session['chat_history'],
+            )
+            session['current_workflow'] = None
+            session['workflow_state'] = None
         else:
-            response = rule_based_response(current_workflow, user_message, session, session.get('selected_language', 'unknown'))
-            if session.get("workflow_state") == "exit":
-                save_chat_history(
-                    customer_id=customer_id,
-                    language=session.get('selected_language', 'unknown'),
-                    category=current_workflow,
-                    messages=session['chat_history'],
-                )
-                session['current_workflow'] = None
-                session['workflow_state'] = None
-            else:
-                handler_map = {
-                    "New Connection Requests": handle_connection_request,
-                    "Bill Inquiries": handle_bill_inquiries,
-                    "Solar Services": handle_solar_services,
-                }
-                handler = handler_map.get(current_workflow)
-                if handler:
-                    handler(user_message, session)
+            handler_map = {
+                "New Connection Requests": handle_connection_request,
+                "Bill Inquiries": handle_bill_inquiries,
+                "Solar Services": handle_solar_services,
+            }
+            handler = handler_map.get(current_workflow)
+            if handler:
+                handler(user_message, session)
                     
     else:
         # Predict category for user message
@@ -348,3 +351,4 @@ def index(request):
     return render(request, 'index.html')
 
 # python manage.py runserver
+
